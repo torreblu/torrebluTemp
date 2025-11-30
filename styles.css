@@ -307,5 +307,15 @@ footer .back-to-top-link {
 
 footer .back-to-top-link:hover {
     color: #ffd600 !important; /* Amarillo más brillante al pasar el mouse */
+
+
+
+    /* --- Estilos para la Nueva Navegación de Botones en el Hero Banner --- */
+.hero-banner .btn-nav {
+    padding: 8px 15px; /* Más pequeño que los botones de acción principales */
+    font-size: 0.95em;
+    margin: 0 5px;
 }
+}
+
 
