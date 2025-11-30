@@ -9,29 +9,59 @@
 </head>
 <body>
 
+<header class="topnav">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero-banner" style="padding: 60px 20px;">
+    <h1>Galería de Proyectos</h1>
+    <p>Trabajos realizados en instalaciones, tableros y automatización.</p>
+</section>
 
 <div class="wrap">
-    <h2 class="section-title">Nuestros Proyectos Recientes</h2>
 
-    <section class="card-grid" style="gap: 15px;">
-        <div style="background-color: #e0e0e0; height: 250px; border-radius: 8px;">
-            <p style="text-align: center; line-height: 250px; color: #666;">[IMAGEN 1 - Proyecto Fábrica]</p>
+    <section class="gallery-section">
+        <h2 class="section-title">Nuestros Trabajos</h2>
+
+        <p style="text-align:center;">
+            Aquí puedes insertar las imágenes reales en formato cuadrícula.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="service-card">
+                <i class="fa-solid fa-image"></i>
+                <h3>Proyecto 1</h3>
+                <p>Descripción breve.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-image"></i>
+                <h3>Proyecto 2</h3>
+                <p>Descripción breve.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-image"></i>
+                <h3>Proyecto 3</h3>
+                <p>Descripción breve.</p>
+            </div>
+
         </div>
-        <div style="background-color: #e0e0e0; height: 250px; border-radius: 8px;">
-            <p style="text-align: center; line-height: 250px; color: #666;">[IMAGEN 2 - Centro Comercial]</p>
-        </div>
-        <div style="background-color: #e0e0e0; height: 250px; border-radius: 8px;">
-            <p style="text-align: center; line-height: 250px; color: #666;">[IMAGEN 3 - Instalación]</p>
-        </div>
-        <div style="background-color: #e0e0e0; height: 250px; border-radius: 8px;">
-            <p style="text-align: center; line-height: 250px; color: #666;">[IMAGEN 4 - Cableado]</p>
-        </div>
+
     </section>
 
 </div>
 
-<footer>© <span id="year"></span> TORREBLU</footer>
+<footer>
+    © <span id="year"></span> TORREBLU
+</footer>
+
 <script src="script.js"></script>
 </body>
-
 </html>
