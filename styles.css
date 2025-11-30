@@ -292,3 +292,20 @@ footer {
         flex-direction: column; /* Apila las columnas en móvil */
     }
 }
+
+/* --- Estilo de Enlace del Footer (Para darle realce) --- */
+footer .back-to-top-link {
+    display: block; /* Ocupa todo el ancho */
+    padding-bottom: 5px; 
+    margin-bottom: 5px; /* Crea un espacio con el copyright */
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--secondary-yellow) !important; /* Usamos el amarillo de acento */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .back-to-top-link:hover {
+    color: #ffd600 !important; /* Amarillo más brillante al pasar el mouse */
+}
+
