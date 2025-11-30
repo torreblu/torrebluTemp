@@ -42,7 +42,9 @@ CNAME → Configuración para dominio personalizado
 
 
 📞 Contacto
-📧 Correo: andres.delatorrem@gmail.com
-📱 Teléfono: +593 981702495
+📧 Correo: gerencia@torreblu.com
+ventas@torreblu.com
+servicios@torreblu.com
+📱 Teléfono: +593 9 888 47802
 📍 Servicios en Ecuador
 
