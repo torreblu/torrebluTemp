@@ -12,7 +12,6 @@
 <!-- 🔵 MENÚ SUPERIOR -->
 <header class="topnav">
     <nav>
-        <!-- <a href="index.html">Inicio</a> -->
         <a href="servicios.html">Servicios</a>
         <a href="galeria.html">Galería</a>
         <a href="contacto.html">Contacto</a>
@@ -25,47 +24,58 @@
     <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
 
     <div>
-        <a href="#catalogo" class="btn btn-white">Ver Catálogo</a>
+        <a href="galeria.html" class="btn btn-white">Ver Catálogo</a>
         <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
     </div>
 </section>
 
 <div class="wrap">
 
+    <!-- 🔵 SECCIÓN DE SERVICIOS -->
     <section class="services-section">
         <h2 class="section-title">Nuestros Pilares de Servicio</h2>
         <div class="card-grid">
+
             <div class="service-card">
                 <i class="fa-solid fa-bolt"></i>
                 <h3>Insumos Eléctricos</h3>
                 <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                <a href="#catalogo" class="btn">Explorar</a>
+                <a href="galeria.html" class="btn">Explorar</a>
             </div>
+
             <div class="service-card">
                 <i class="fa-solid fa-wrench"></i>
                 <h3>Instalaciones y Proformas</h3>
                 <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
                 <a href="servicios.html" class="btn">Solicitar</a>
             </div>
+
             <div class="service-card">
                 <i class="fa-solid fa-robot"></i>
                 <h3>Proyectos y Automatización</h3>
                 <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
                 <a href="servicios.html" class="btn">Conocer Más</a>
             </div>
+
         </div>
     </section>
 
+    <!-- 🔵 SECCIÓN DE CATÁLOGO (opcional para contenido local) -->
     <section class="catalog-section" id="catalogo">
+        <!-- Puedes dejar vacía o colocar un mensaje como "Visita nuestra galería" -->
     </section>
 
 </div>
 
+<!-- 🔵 FOOTER -->
 <footer>
     © <span id="year"></span> TORREBLU
 </footer>
 
-<script src="script.js"></script>
+<script>
+    // Actualiza el año automáticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
