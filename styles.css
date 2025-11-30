@@ -319,3 +319,49 @@ footer .back-to-top-link:hover {
 }
 
 
+/* ===== MENÚ SUPERIOR ===== */
+
+.topnav {
+  width: 100%;
+  background: #0a0a23;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topnav nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.topnav a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.topnav a:hover {
+  color: #2fb3ff;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px;
+}
+
+
+
+
