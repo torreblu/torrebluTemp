@@ -1,43 +1,40 @@
-/* --- VARIABLES Y RESET BÁSICO --- */
+/* === VARIABLES === */
 :root {
-    --primary-blue: #1A54A6; /* Azul Oscuro Banner/Header */
-    --light-blue: #3E84F5;   /* Azul Botones/Acentos */
-    --text-dark: #333333;
-    --text-light: #ffffff;
+    --primary-blue: #1A54A6;
+    --light-blue: #3E84F5;
+    --text-dark: #333;
+    --text-light: #fff;
     --bg-light: #f5f5f5;
-    --card-bg: #ffffff;
+    --card-bg: #fff;
     --border-radius: 8px;
     --shadow-subtle: 0 4px 10px rgba(0,0,0,0.08);
-    --secondary-yellow: #fdd835; /* Color para iconos de ingeniería/proyectos */
+    --accent-yellow: #fdd835;
 }
 
-/* --- Limpieza y Reseteo AGRESIVO (Para evitar bordes de iframe) --- */
+/* === RESET BÁSICO === */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
-    /* ¡FUERZA A NO TENER MÁRGENES! Esto es clave para el iframe */
-    margin: 0 !important;
-    padding: 0 !important; 
     width: 100%;
-    overflow-x: hidden; /* Previene scrollbar horizontal */
-}
-
-body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--bg-light);
     color: var(--text-dark);
+    overflow-x: hidden;
 }
 
+/* === CONTENEDOR GENERAL === */
 .wrap {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- SECCIONES GENERALES Y BOTONES --- */
+/* === HERO BANNER === */
 .hero-banner {
     background-color: var(--primary-blue);
     color: var(--text-light);
@@ -56,14 +53,13 @@ body {
     font-size: 1.1em;
 }
 
-.btn {
+.hero-banner .btn {
     display: inline-block;
     padding: 12px 25px;
-    margin: 0 10px;
     border-radius: 5px;
-    text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .btn-blue {
@@ -86,13 +82,15 @@ body {
     background-color: var(--bg-light);
 }
 
+/* === SECCIONES === */
 .section-title {
     text-align: center;
     font-size: 1.8em;
-    margin: 40px 0 30px 0;
+    margin: 40px 0 30px;
     color: var(--primary-blue);
 }
 
+/* === TARJETAS Y GRID === */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -100,63 +98,15 @@ body {
     margin-bottom: 40px;
 }
 
-.service-card, .contact-card {
-    background-color: var(--card-bg);
+.card-grid .card {
+    background: var(--card-bg);
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-subtle);
     text-align: center;
 }
 
-.service-card i, .contact-card i {
-    font-size: 2.5em;
-    color: var(--light-blue);
-    margin-bottom: 15px;
-}
-
-.service-card h3 {
-    margin-bottom: 10px;
-}
-
-.service-card .btn {
-    margin-top: 20px;
-    background-color: var(--primary-blue);
-    color: white;
-}
-
-.service-card .btn:hover {
-    background-color: var(--light-blue);
-}
-
-/* --- ESTILOS DE CATÁLOGO --- */
-.catalog-section {
-    padding: 30px 0;
-}
-
-.filter-tabs {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.filter-tabs .tab-btn {
-    background-color: #e0e0e0;
-    color: var(--text-dark);
-    border: none;
-    padding: 10px 18px;
-    margin: 0 5px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.9em;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.filter-tabs .tab-btn:hover,
-.filter-tabs .tab-btn.active {
-    background-color: var(--light-blue);
-    color: var(--text-light);
-}
-
+/* === PRODUCTOS / CATÁLOGO === */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -165,10 +115,10 @@ body {
 }
 
 .product-card {
-    background-color: var(--card-bg);
-    padding: 20px;
+    background: var(--card-bg);
     border-radius: var(--border-radius);
     border: 1px solid #e0e0e0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -192,95 +142,103 @@ body {
 }
 
 .product-card .quote-btn {
-    background-color: var(--secondary-yellow);
+    background-color: var(--accent-yellow);
     color: var(--text-dark);
     padding: 8px 15px;
+    border-radius: 4px;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
     margin-top: auto;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 .product-card .quote-btn:hover {
     background-color: #fbc02d;
 }
 
-/* --- ESTILOS DE LA PÁGINA DE SERVICIOS (2 COLUMNAS) --- */
-.engineering-services {
-    display: flex;
-    gap: 30px;
-    margin: 40px 0;
-    text-align: left;
-}
-.engineering-services > div {
-    flex: 1; 
-}
-.engineering-services h4 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-}
-.engineering-services ul {
-    list-style: none;
-    padding: 0;
-}
-.engineering-services li {
-    padding-left: 1.2em;
-    margin-bottom: 8px;
-    position: relative;
-}
-.engineering-services li:before {
-    content: "\f00c"; /* Checkmark icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    color: var(--secondary-yellow);
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* --- CONTACTO / FORMULARIO --- */
-.contact-form-section {
-    padding: 30px 0;
-}
-.contact-form-section input, .contact-form-section select, .contact-form-section textarea {
+/* === FORMULARIO DE CONTACTO === */
+.contact-form-section input,
+.contact-form-section select,
+.contact-form-section textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
     border-radius: 4px;
+    border: 1px solid #ccc;
 }
+
 .contact-form-section textarea {
     min-height: 120px;
 }
+
 .contact-form-section .btn {
     width: 100%;
     margin: 10px 0;
     text-align: center;
 }
+
+/* === MAPA / PLACEHOLDER === */
 .map-placeholder {
     height: 300px;
-    background-color: #cccccc;
+    background: #ccc;
     text-align: center;
     line-height: 300px;
     color: #666;
-    margin-top: 20px;
     border-radius: var(--border-radius);
+    margin-top: 20px;
 }
 
-
-/* --- FOOTER --- */
+/* === FOOTER === */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: var(--primary-blue);
+    background: var(--primary-blue);
     color: var(--text-light);
     font-size: 0.9em;
-    margin-top: 30px;
 }
 
-/* --- MEDIA QUERIES (Responsiveness) --- */
+footer .back-to-top-link {
+    display: block;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: var(--accent-yellow);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .back-to-top-link:hover {
+    color: #ffd600;
+}
+
+/* === NAVEGACIÓN SUPERIOR === */
+.topnav {
+    width: 100%;
+    background: #0a0a23;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.topnav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav a:hover {
+    color: #2fb3ff;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .hero-banner {
         padding: 60px 20px;
@@ -289,79 +247,6 @@ footer {
         font-size: 2em;
     }
     .engineering-services {
-        flex-direction: column; /* Apila las columnas en móvil */
+        flex-direction: column;
     }
 }
-
-/* --- Estilo de Enlace del Footer (Para darle realce) --- */
-footer .back-to-top-link {
-    display: block; /* Ocupa todo el ancho */
-    padding-bottom: 5px; 
-    margin-bottom: 5px; /* Crea un espacio con el copyright */
-    font-size: 1.1em;
-    font-weight: bold;
-    color: var(--secondary-yellow) !important; /* Usamos el amarillo de acento */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer .back-to-top-link:hover {
-    color: #ffd600 !important; /* Amarillo más brillante al pasar el mouse */
-
-
-
-    /* --- Estilos para la Nueva Navegación de Botones en el Hero Banner --- */
-.hero-banner .btn-nav {
-    padding: 8px 15px; /* Más pequeño que los botones de acción principales */
-    font-size: 0.95em;
-    margin: 0 5px;
-}
-}
-
-
-/* ===== MENÚ SUPERIOR ===== */
-
-.topnav {
-  width: 100%;
-  background: #0a0a23;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.topnav nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-
-.topnav a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.topnav a:hover {
-  color: #2fb3ff;
-}
-
-/* ===== ESTILOS GENERALES ===== */
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-}
-
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px;
-}
-
-
-
-
