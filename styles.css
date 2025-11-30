@@ -11,10 +11,17 @@
     --secondary-yellow: #fdd835; /* Color para iconos de ingeniería/proyectos */
 }
 
+/* --- Limpieza y Reseteo AGRESIVO (Para evitar bordes de iframe) --- */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html, body {
+    /* ¡FUERZA A NO TENER MÁRGENES! Esto es clave para el iframe */
+    margin: 0 !important;
+    padding: 0 !important; 
+    width: 100%;
+    overflow-x: hidden; /* Previene scrollbar horizontal */
 }
 
 body {
@@ -28,41 +35,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* --- HEADER Y NAVEGACIÓN --- */
-header {
-    background-color: var(--card-bg);
-    box-shadow: var(--shadow-subtle);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
-    color: var(--primary-blue);
-    font-weight: bold;
-}
-
-.brand .logo {
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-dark);
-    padding: 8px 15px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--primary-blue);
 }
 
 /* --- SECCIONES GENERALES Y BOTONES --- */
@@ -243,7 +215,7 @@ nav a:hover {
     text-align: left;
 }
 .engineering-services > div {
-    flex: 1; /* Divide en dos columnas iguales */
+    flex: 1; 
 }
 .engineering-services h4 {
     color: var(--primary-blue);
@@ -315,16 +287,6 @@ footer {
     }
     .hero-banner h1 {
         font-size: 2em;
-    }
-    header {
-        flex-direction: column;
-        padding: 15px 0;
-    }
-    nav {
-        margin-top: 10px;
-    }
-    nav a {
-        padding: 5px 10px;
     }
     .engineering-services {
         flex-direction: column; /* Apila las columnas en móvil */
