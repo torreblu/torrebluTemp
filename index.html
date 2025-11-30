@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TORREBLU | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+<header>
+    <div class="brand">
+        <div class="logo">TB</div>
+        <div>
+            <strong>TORREBLU</strong><br>
+            <span class="note">Insumos Eléctricos</span>
+        </div>
+    </div>
+    <nav>
+        <a class="navlink" href="index.html">Inicio</a>
+        <a class="navlink" href="servicios.html">Servicios</a>
+        <a class="navlink" href="galeria.html">Galería</a>
+        <a class="navlink" href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero-banner">
+    <h1>La Energía de tu Empresa, en un solo lugar</h1>
+    <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
+    <div>
+        <a href="#catalogo" class="btn btn-white">Ver Catálogo</a>
+        <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
+    </div>
+</section>
+
+<div class="wrap">
+    
+    <section class="services-section">
+        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+        <div class="card-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Insumos Eléctricos</h3>
+                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                <a href="#catalogo" class="btn">Explorar</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Instalaciones y Proformas</h3>
+                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                <a href="servicios.html" class="btn">Solicitar</a>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Proyectos y Automatización</h3>
+                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                <a href="servicios.html" class="btn">Conocer Más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+        <h2 class="section-title">Catálogo de Insumos Eléctricos</h2>
+
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">Todos</button>
+            <button class="tab-btn" data-filter="cables">Cables</button>
+            <button class="tab-btn" data-filter="contactores">Contactores</button>
+            <button class="tab-btn" data-filter="iluminacion">Iluminación</button>
+            <button class="tab-btn" data-filter="herramientas">Herramientas</button>
+        </div>
+
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="cables">
+                <div style="height: 150px; background-color: #f1f1f1; margin-bottom: 10px; border-radius: 4px;">[Imagen Cable]</div>
+                <h4>Cable THHN 12 AWG</h4>
+                <p class="price">$1.20 / metro</p>
+                <div class="details"><p>100% cobre, aislamiento PVC, 90°C.</p></div>
+                <a href="contacto.html" class="quote-btn">Cotizar</a>
+            </div>
+
+            <div class="product-card" data-category="iluminacion">
+                <div style="height: 150px; background-color: #f1f1f1; margin-bottom: 10px; border-radius: 4px;">[Imagen Panel]</div>
+                <h4>Panel LED 40W</h4>
+                <p class="price">$25.00</p>
+                <div class="details"><p>6000K, 4000 lúmenes, IP44.</p></div>
+                <a href="contacto.html" class="quote-btn">Cotizar</a>
+            </div>
+
+            <div class="product-card" data-category="contactores">
+                <div style="height: 150px; background-color: #f1f1f1; margin-bottom: 10px; border-radius: 4px;">[Imagen Contactor]</div>
+                <h4>Contactor Trifásico 9A</h4>
+                <p class="price">$45.50</p>
+                <div class="details"><p>Bobina 220V, 3 polos principales.</p></div>
+                <a href="contacto.html" class="quote-btn">Cotizar</a>
+            </div>
+
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="#" class="btn btn-blue">Ver Catálogo Completo (PDF)</a>
+        </div>
+    </section>
+    
+</div>
+
+<footer>© <span id="year"></span> TORREBLU</footer>
+<script src="script.js"></script>
+</body>
+</html>

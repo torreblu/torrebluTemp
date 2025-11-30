@@ -1,0 +1,332 @@
+/* --- VARIABLES Y RESET BÁSICO --- */
+:root {
+    --primary-blue: #1A54A6; /* Azul Oscuro Banner/Header */
+    --light-blue: #3E84F5;   /* Azul Botones/Acentos */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --bg-light: #f5f5f5;
+    --card-bg: #ffffff;
+    --border-radius: 8px;
+    --shadow-subtle: 0 4px 10px rgba(0,0,0,0.08);
+    --secondary-yellow: #fdd835; /* Color para iconos de ingeniería/proyectos */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    background-color: var(--card-bg);
+    box-shadow: var(--shadow-subtle);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.brand .logo {
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 8px 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* --- SECCIONES GENERALES Y BOTONES --- */
+.hero-banner {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-blue {
+    background-color: var(--light-blue);
+    color: var(--text-light);
+    border: 2px solid var(--light-blue);
+}
+
+.btn-blue:hover {
+    background-color: #316dd3;
+}
+
+.btn-white {
+    background-color: var(--text-light);
+    color: var(--primary-blue);
+    border: 2px solid var(--text-light);
+}
+
+.btn-white:hover {
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 40px 0 30px 0;
+    color: var(--primary-blue);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.service-card, .contact-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+    text-align: center;
+}
+
+.service-card i, .contact-card i {
+    font-size: 2.5em;
+    color: var(--light-blue);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card .btn {
+    margin-top: 20px;
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.service-card .btn:hover {
+    background-color: var(--light-blue);
+}
+
+/* --- ESTILOS DE CATÁLOGO --- */
+.catalog-section {
+    padding: 30px 0;
+}
+
+.filter-tabs {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.filter-tabs .tab-btn {
+    background-color: #e0e0e0;
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-tabs .tab-btn:hover,
+.filter-tabs .tab-btn.active {
+    background-color: var(--light-blue);
+    color: var(--text-light);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 10px 0;
+}
+
+.product-card .details {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card .quote-btn {
+    background-color: var(--secondary-yellow);
+    color: var(--text-dark);
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-top: auto;
+    transition: background-color 0.3s;
+}
+
+.product-card .quote-btn:hover {
+    background-color: #fbc02d;
+}
+
+/* --- ESTILOS DE LA PÁGINA DE SERVICIOS (2 COLUMNAS) --- */
+.engineering-services {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    text-align: left;
+}
+.engineering-services > div {
+    flex: 1; /* Divide en dos columnas iguales */
+}
+.engineering-services h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+.engineering-services ul {
+    list-style: none;
+    padding: 0;
+}
+.engineering-services li {
+    padding-left: 1.2em;
+    margin-bottom: 8px;
+    position: relative;
+}
+.engineering-services li:before {
+    content: "\f00c"; /* Checkmark icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--secondary-yellow);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* --- CONTACTO / FORMULARIO --- */
+.contact-form-section {
+    padding: 30px 0;
+}
+.contact-form-section input, .contact-form-section select, .contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.contact-form-section textarea {
+    min-height: 120px;
+}
+.contact-form-section .btn {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+.map-placeholder {
+    height: 300px;
+    background-color: #cccccc;
+    text-align: center;
+    line-height: 300px;
+    color: #666;
+    margin-top: 20px;
+    border-radius: var(--border-radius);
+}
+
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/* --- MEDIA QUERIES (Responsiveness) --- */
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 60px 20px;
+    }
+    .hero-banner h1 {
+        font-size: 2em;
+    }
+    header {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+    nav {
+        margin-top: 10px;
+    }
+    nav a {
+        padding: 5px 10px;
+    }
+    .engineering-services {
+        flex-direction: column; /* Apila las columnas en móvil */
+    }
+}
