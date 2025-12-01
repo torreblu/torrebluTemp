@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORREBLU | Inicio</title>
+
+    <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS NUEVO SOLO PARA INDEX -->
     <link rel="stylesheet" href="index-style.css">
 </head>
-
 <body>
 
-<!-- 🔵 MENÚ SUPERIOR -->
+<!-- 🔵 NAV -->
 <header class="topnav">
     <nav>
         <a href="servicios.html">Servicios</a>
@@ -19,49 +22,52 @@
     </nav>
 </header>
 
-<!-- 🔵 HERO -->
+<!-- 🔵 HERO MÁS COMPACTO -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>La Energía de tu Empresa, en un solo lugar</h1>
-        <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
+    <h1>La Energía de tu Empresa, en un solo lugar</h1>
+    <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
 
-        <div class="hero-buttons">
-            <a href="galeria.html" class="btn light">Ver Catálogo</a>
-            <a href="contacto.html" class="btn dark">Solicitar Cotización</a>
-            <a href="nuestrosvalores.html" class="btn light">Nuestros valores</a>
-        </div>
+    <div>
+        <a href="galeria.html" class="btn btn-white">Ver Catálogo</a>
+        <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
+        <a href="nuestrosvalores.html" class="btn btn-white">Nuestros valores</a>
     </div>
 </section>
 
-<!-- 🔵 SERVICIOS -->
-<section class="services">
-    <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+<!-- 🔵 CONTENIDO PRINCIPAL -->
+<div class="wrap">
 
-    <div class="card-grid">
+    <!-- SERVICIOS -->
+    <section class="services-section">
+        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
 
-        <div class="service-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Insumos Eléctricos</h3>
-            <p>Cables, contactores, iluminación y más. Stock diario.</p>
-            <a href="galeria.html" class="btn-card">Explorar</a>
+        <div class="card-grid">
+
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Insumos Eléctricos</h3>
+                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                <a href="galeria.html" class="btn btn-blue">Explorar</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Instalaciones y Proformas</h3>
+                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                <a href="servicios.html" class="btn btn-blue">Solicitar</a>
+            </div>
+
+            <div class="service-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Proyectos y Automatización</h3>
+                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                <a href="servicios.html" class="btn btn-blue">Conocer más</a>
+            </div>
+
         </div>
+    </section>
 
-        <div class="service-card">
-            <i class="fa-solid fa-wrench"></i>
-            <h3>Instalaciones y Proformas</h3>
-            <p>Residencial, comercial e industrial. Proforma en 24h.</p>
-            <a href="servicios.html" class="btn-card">Solicitar</a>
-        </div>
-
-        <div class="service-card">
-            <i class="fa-solid fa-robot"></i>
-            <h3>Proyectos y Automatización</h3>
-            <p>Sistemas de control para fábricas y maquinaria.</p>
-            <a href="servicios.html" class="btn-card">Conocer Más</a>
-        </div>
-
-    </div>
-</section>
+</div>
 
 <!-- 🔵 FOOTER -->
 <footer>
@@ -69,9 +75,8 @@
 </footer>
 
 <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
 </html>
-
