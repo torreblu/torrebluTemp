@@ -12,7 +12,7 @@ body {
 }
 
 /* --- HEADER / NAVBAR --- */
-header {
+.topnav {
     width: 100%;
     background-color: #003366;
     padding: 15px 20px;
@@ -20,32 +20,33 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header .logo {
+.topnav .logo {
     color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
-header nav {
+.topnav ul {
+    list-style: none;
     display: flex;
     gap: 20px;
 }
 
-header nav a {
+.topnav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
-header nav a:hover {
+.topnav ul li a:hover {
     color: #00aaff;
 }
 
@@ -56,7 +57,7 @@ header nav a:hover {
     overflow: hidden;
     background-color: #e0e8f5;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 70px; /* espacio para header fijo */
 }
 
 .hero::before {
@@ -93,7 +94,7 @@ header nav a:hover {
 }
 
 /* --- BOTONES --- */
-.button {
+.button, .btn-service {
     display: inline-block;
     padding: 12px 30px;
     margin-top: 20px;
@@ -105,7 +106,7 @@ header nav a:hover {
     transition: all 0.3s ease;
 }
 
-.button:hover {
+.button:hover, .btn-service:hover {
     background: linear-gradient(90deg, #003366, #0059b3);
     transform: translateY(-2px);
 }
@@ -126,6 +127,57 @@ section p {
     color: #003366;
 }
 
+/* --- SECCIÓN DE SERVICIOS --- */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: #0072e5;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.2rem;
+    color: #001f3f;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #003366;
+}
+
+.service-card a.btn-service {
+    margin-top: 15px;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    margin-top: 40px;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
     .hero h1 {
@@ -137,6 +189,9 @@ section p {
 }
 
 @media (max-width: 768px) {
+    .topnav ul {
+        gap: 15px;
+    }
     .hero {
         padding: 80px 15px 60px 15px;
     }
@@ -155,8 +210,11 @@ section p {
     .hero p {
         font-size: 0.95rem;
     }
-    .button {
+    .button, .btn-service {
         padding: 10px 20px;
         font-size: 0.9rem;
+    }
+    .card-grid {
+        gap: 15px;
     }
 }
