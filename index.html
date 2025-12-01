@@ -1,82 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TORREBLU | Inicio</title>
-
-    <!-- ICONOS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- CSS NUEVO SOLO PARA INDEX -->
-    <link rel="stylesheet" href="index-style.css">
+    <title>Inicio - Empresa Energía</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- 🔵 NAV -->
-<header class="topnav">
+<!-- NAV -->
+<header>
     <nav>
-        <a href="servicios.html">Servicios</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
+        <h2>Mi Empresa</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
 </header>
 
-<!-- 🔵 HERO MÁS COMPACTO -->
+<!-- HERO -->
 <section class="hero">
-    <h1>La Energía de tu Empresa, en un solo lugar</h1>
-    <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
+    <div class="hero-content">
+        <h1>La energía de tu empresa</h1>
+        <p>Soluciones confiables y a medida para tus proyectos.</p>
 
-    <div>
-        <a href="galeria.html" class="btn btn-white">Ver Catálogo</a>
-        <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
-        <a href="nuestrosvalores.html" class="btn btn-white">Nuestros valores</a>
+        <div class="hero-buttons">
+            <a href="catalogo.html" class="btn-modern">Ver catálogo</a>
+            <a href="cotizacion.html" class="btn-modern">Solicitar cotización</a>
+            <a href="nuestrosvalores.html" class="btn-modern">Nuestros valores</a>
+        </div>
     </div>
 </section>
 
-<!-- 🔵 CONTENIDO PRINCIPAL -->
-<div class="wrap">
+<!-- PILARES -->
+<section class="section">
+    <h2>Nuestros pilares de servicio</h2>
 
-    <!-- SERVICIOS -->
-    <section class="services-section">
-        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
-
-        <div class="card-grid">
-
-            <div class="service-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Insumos Eléctricos</h3>
-                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                <a href="galeria.html" class="btn btn-blue">Explorar</a>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-wrench"></i>
-                <h3>Instalaciones y Proformas</h3>
-                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
-                <a href="servicios.html" class="btn btn-blue">Solicitar</a>
-            </div>
-
-            <div class="service-card">
-                <i class="fa-solid fa-robot"></i>
-                <h3>Proyectos y Automatización</h3>
-                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
-                <a href="servicios.html" class="btn btn-blue">Conocer más</a>
-            </div>
-
+    <div class="pilares">
+        <div class="pilar">
+            <img src="img/icon1.png" alt="">
+            <h3>Calidad</h3>
+            <p>Equipos certificados y de alto rendimiento.</p>
         </div>
-    </section>
 
-</div>
+        <div class="pilar">
+            <img src="img/icon2.png" alt="">
+            <h3>Soporte</h3>
+            <p>Acompañamiento técnico en cada etapa.</p>
+        </div>
 
-<!-- 🔵 FOOTER -->
+        <div class="pilar">
+            <img src="img/icon3.png" alt="">
+            <h3>Rapidez</h3>
+            <p>Atención ágil para tus necesidades urgentes.</p>
+        </div>
+
+        <div class="pilar">
+            <img src="img/icon4.png" alt="">
+            <h3>Innovación</h3>
+            <p>Soluciones modernas y eficientes.</p>
+        </div>
+
+        <div class="pilar">
+            <img src="img/icon5.png" alt="">
+            <h3>Garantía</h3>
+            <p>Respaldo total en todos los productos.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    © <span id="year"></span> TORREBLU
+    © 2025 Mi Empresa. Todos los derechos reservados.
 </footer>
-
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
