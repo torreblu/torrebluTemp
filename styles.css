@@ -308,4 +308,38 @@ footer .back-to-top-link:hover {
 }
 
 
+/*otro para inicio*/
+/* Botones del hero */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 2rem;
+    background: #0056b8;          /* azul principal */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    border: 2px solid #0056b8;
+}
+
+.hero-btn:hover {
+    background: #003f87;          /* azul más oscuro */
+    border-color: #003f87;
+}
+
+/* Ajuste de imágenes dentro de tarjetas */
+.cards .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+
 
