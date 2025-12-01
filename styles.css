@@ -288,3 +288,24 @@ footer .back-to-top-link:hover {
     transform: scale(1.05);
 }
 
+/*para el inicio*/
+/* Botones especiales para las tarjetas del inicio */
+.card .btn-pill {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: var(--primary-blue);
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.card .btn-pill:hover {
+    background: #0d3a7a;
+    transform: scale(1.05);
+}
+
+
+
