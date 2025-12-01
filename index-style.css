@@ -1,162 +1,157 @@
-/* ============================
-   ESTILOS GENERALES
-============================ */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fc;
-    color: #333;
+/* ==== RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
-.wrap {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+/* ==== NAV ==== */
+header {
+  background: #ffffff;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* ============================
-   MENÚ SUPERIOR
-============================ */
-.topnav {
-    background: #1A54A6;
-    padding: 12px 0;
-    text-align: center;
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.topnav a {
-    color: white;
-    margin: 0 18px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
 
-.topnav a:hover {
-    color: #cfe2ff;
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-/* ============================
-   HERO (AJUSTADO)
-============================ */
-.hero-banner {
-    background: linear-gradient(135deg, #1A54A6, #1f6ed4);
-    color: white;
-    text-align: center;
-
-    padding: 50px 20px 60px;   /* ANTES: 90px 20px 120px */
-    margin-bottom: 20px;       /* Reduce espacio hacia abajo */
-
-    animation: fadeIn 0.8s ease-out;
+nav ul li a:hover {
+  color: #0051ff;
 }
 
-.hero-banner h1 {
-    font-size: 2.2rem;  /* ANTES: 2.7rem */
-    font-weight: bold;
-    margin-bottom: 12px;
+/* ==== HERO ==== */
+.hero {
+  background: url("img/hero.jpg") center/cover no-repeat;
+  padding: 110px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
-.hero-banner p {
-    font-size: 1.1rem;  /* más compacto */
-    max-width: 700px;
-    margin: auto;
-    margin-bottom: 18px;  /* menos espacio */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.hero-banner .btn {
-    margin: 6px;  /* antes 10px */
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
 }
 
-/* ============================
-   BOTONES
-============================ */
-.btn {
-    display: inline-block;
-    padding: 10px 20px; /* antes 14px 26px */
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.25s;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.btn-white {
-    background: white;
-    color: #1A54A6;
-    border: 2px solid white;
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
 }
 
-.btn-white:hover {
-    background: #e6e6e6;
-    border-color: #e6e6e6;
+/* ==== HERO BUTTONS ==== */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.btn-blue {
-    background: #003f99;
-    color: white;
-    border: 2px solid #003f99;
+.btn-modern {
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: white;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0051ff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
-.btn-blue:hover {
-    background: #002f73;
-    border-color: #002f73;
+.btn-modern:hover {
+  background: #0051ff;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 81, 255, 0.3);
 }
 
-/* ============================
-   SECCIÓN DE SERVICIOS (SUBE)
-============================ */
-.services-section {
-    margin-top: 10px; /* ANTES: 40-60px */
+/* ==== PILARES ==== */
+.section {
+  padding: 60px 20px;
+  width: 90%;
+  margin: auto;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 1.9rem;
-    margin-bottom: 30px;
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  color: #222;
 }
 
-/* ============================
-   TARJETAS
-============================ */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 25px;
+.pilares {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
 }
 
-.service-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: 0.25s;
+.pilar {
+  background: #ffffff;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-.service-card i {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #1A54A6;
+.pilar:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+.pilar img {
+  width: 55px;
+  margin-bottom: 15px;
 }
 
-/* ============================
-   FOOTER
-============================ */
+.pilar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* ==== FOOTER ==== */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    background: #1A54A6;
-    color: white;
-}
-
-/* ============================
-   ANIMACIONES
-============================ */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+  background: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 }
