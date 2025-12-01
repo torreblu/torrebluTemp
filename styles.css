@@ -40,7 +40,8 @@ body {
     padding: 5px 10px;
 }
 
-.topnav ul li a:hover {
+.topnav ul li a:hover,
+.topnav ul li a.active {
     color: #00aaff;
 }
 
@@ -64,8 +65,8 @@ section.hero::before {
     transform: translate(-50%, -50%);
     background: url('assets/images/logo.jpeg') no-repeat center center;
     background-size: contain;
-    opacity: 0.25; /* aumento para mejorar visibilidad */
-    filter: blur(3px); /* menor blur para verse mejor */
+    opacity: 0.35; /* acá debo revisar el logo*/
+    filter: blur(1px); /* filter y opacity*/
     z-index: 0;
 }
 
@@ -113,48 +114,79 @@ section {
 section h2 {
     font-size: 2rem;
     color: #001f3f;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 section p {
     font-size: 1rem;
     color: #003366;
+    text-align: center;
 }
 
-/* --- TARJETAS DE SERVICIOS / GALERÍA --- */
+/* --- CUADRÍCULAS --- */
+div.cards, div.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+div.card, div.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+div.card:hover, div.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+div.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+div.card h3, div.service-card h3 {
+    font-size: 1.2rem;
+    color: #001f3f;
+    margin-bottom: 10px;
+}
+
+div.card p, div.service-card p {
+    font-size: 0.95rem;
+    color: #003366;
+}
+
+/* --- VALORES --- */
+div.cards-section .card {
+    border-left: 4px solid #0072e5;
+    padding-left: 15px;
+    text-align: left;
+}
+
+
+/* GALERÍA */
 .cards-section .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.cards-section .card {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
 .cards-section .card img {
     width: 100%;
-    height: 200px;
+    height: 200px; /* ajusta según prefieras */
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-.cards-section .card h3 {
-    font-size: 1.2rem;
-    color: #001f3f;
-    margin-bottom: 10px;
-}
 
-.cards-section .card p {
-    font-size: 0.95rem;
-    color: #003366;
-}
 
 /* --- FOOTER --- */
 footer {
@@ -188,7 +220,7 @@ footer {
     section.hero p {
         font-size: 1rem;
     }
-    .cards-section .cards {
+    div.cards, div.card-grid {
         gap: 15px;
     }
 }
@@ -204,7 +236,10 @@ footer {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    .cards-section .cards {
+    div.cards, div.card-grid {
         gap: 10px;
     }
 }
+
+
+
