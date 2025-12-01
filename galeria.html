@@ -1,64 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORREBLU | Galería</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
 
+<!-- NAV -->
+<header class="topnav">
+    <div class="logo">TORREBLU</div>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html" class="active">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</header>
 
-    <header class="topnav">
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
-
-<section class="hero-banner" style="padding: 60px 20px;">
-    <h1>Galería de Proyectos</h1>
-    <p>Trabajos realizados en instalaciones, tableros y automatización.</p>
+<!-- HERO -->
+<section class="hero">
+    <div class="wrap">
+        <h1>Galería de Proyectos</h1>
+        <p>Trabajos realizados en instalaciones, tableros y automatización.</p>
+    </div>
 </section>
 
-<div class="wrap">
-
-    <section class="gallery-section">
+<!-- TARJETAS DE PROYECTOS -->
+<section class="cards-section">
+    <div class="wrap">
         <h2 class="section-title">Nuestros Trabajos</h2>
-        <p style="text-align:center;"></p>
 
-      
-        <div class="card-grid">
-           <div class="service-card">
-               <h3>Proyecto 1</h3>
-               <img src="assets/images/proyecto1.jpeg" alt="Proyecto 1" style="width:100%; border-radius:8px; margin:10px 0;">
-               <p> Módulo de encendido para quemadores a GLP industriales, especiales para secadores de Cacao, Maiz, café, soya, arroz, ETC. Disponible en voltajes 220V y 120V.</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Proyecto 1</h3>
+                <img src="assets/images/proyecto1.jpeg" alt="Proyecto 1" style="width:60px; height:60px; margin-bottom: 1rem;">
+                <p>Módulo de encendido para quemadores a GLP industriales, especiales para secadores de Cacao, Maíz, Café, Soya, Arroz, etc. Disponible en voltajes 220V y 120V.</p>
             </div>
 
-            <div class="service-card">
+            <div class="card">
                 <h3>Proyecto 2</h3>
-                <img src="assets/images/proyecto2.jpeg" alt="Proyecto 2" style="width:100%; border-radius:8px; margin:10px 0;">
-                <p> Medidores de humedad y temperatura para granos, instalado en secadores específicos para obtener un control en tiempo real, mejorando y optimizando los procesos.</p>
+                <img src="assets/images/proyecto2.jpeg" alt="Proyecto 2" style="width:60px; height:60px; margin-bottom: 1rem;">
+                <p>Medidores de humedad y temperatura para granos, instalado en secadores específicos para obtener un control en tiempo real, mejorando y optimizando los procesos.</p>
             </div>
-
-
-
         </div>
-    </section>
-</div>
+    </div>
+</section>
 
+<!-- FOOTER -->
 <footer>
-    © <span id="year"></span> TORREBLU
+    © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
 
-<script src="script.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
-
-
-
-
-
