@@ -1,96 +1,78 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORREBLU | Servicios</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
+<!-- NAV -->
 <header class="topnav">
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+    <div class="logo">TORREBLU</div>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html" class="active">Servicios</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
 </header>
 
-<section class="hero-banner" style="padding: 60px 20px;">
-    <h1>Servicios Profesionales</h1>
-    <p>Soluciones eléctricas para hogares, negocios e industria.</p>
+<!-- HERO -->
+<section class="hero">
+    <div class="wrap">
+        <h1>Servicios Profesionales</h1>
+        <p>Soluciones eléctricas para hogares, negocios e industria.</p>
+    </div>
 </section>
 
-<div class="wrap">
-
-    <section class="services-section">
+<!-- TARJETAS DE SERVICIOS -->
+<section class="cards-section">
+    <div class="wrap">
         <h2 class="section-title">Nuestros Servicios</h2>
 
-        <div class="card-grid enhanced-services">
-
-            <div class="service-card enhanced-card">
-                <i class="fa-solid fa-plug-circle-bolt enhanced-icon"></i>
+        <div class="cards">
+            <div class="card">
+                <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
                 <h3>Instalaciones Eléctricas</h3>
                 <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
-
-                <a 
-                    class="btn-service"
-                    href="https://wa.me/593988847802?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Instalaciones%20Eléctricas" 
-                    target="_blank">
-                    Solicitar este servicio
-                </a>
+                <a href="https://wa.me/593988847802?text=Hola,%20deseo%20más%20información%20sobre%20el%20servicio%20de%20Instalaciones%20Eléctricas" class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
 
-            <div class="service-card enhanced-card">
-                <i class="fa-solid fa-clipboard-check enhanced-icon"></i>
+            <div class="card">
+                <i class="fa-solid fa-clipboard-check fa-2x"></i>
                 <h3>Proformas y Evaluaciones</h3>
                 <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
-
-                <a 
-                    class="btn-service"
-                    href="https://wa.me/593988847802?text=Hola,%20deseo%20una%20proforma%20o%20evaluación%20técnica" 
-                    target="_blank">
-                    Solicitar este servicio
-                </a>
+                <a href="https://wa.me/593988847802?text=Hola,%20deseo%20una%20proforma%20o%20evaluación%20técnica" class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
 
-            <div class="service-card enhanced-card">
-                <i class="fa-solid fa-microchip enhanced-icon"></i>
+            <div class="card">
+                <i class="fa-solid fa-microchip fa-2x"></i>
                 <h3>Automatización y Control</h3>
                 <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
-
-                <a 
-                    class="btn-service"
-                    href="https://wa.me/593988847802?text=Hola,%20quiero%20información%20sobre%20proyectos%20de%20automatización%20y%20control" 
-                    target="_blank">
-                    Solicitar este servicio
-                </a>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20información%20sobre%20proyectos%20de%20automatización%20y%20control" class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
 
-            <div class="service-card enhanced-card">
-                <i class="fa-solid fa-lightbulb enhanced-icon"></i>
+            <div class="card">
+                <i class="fa-solid fa-lightbulb fa-2x"></i>
                 <h3>Iluminación</h3>
                 <p>Optimización de iluminación para ahorro energético y seguridad.</p>
-
-                <a 
-                    class="btn-service"
-                    href="https://wa.me/593988847802?text=Hola,%20quiero%20información%20sobre%20servicios%20de%20iluminación" 
-                    target="_blank">
-                    Solicitar este servicio
-                </a>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20información%20sobre%20servicios%20de%20iluminación" class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
-
         </div>
-    </section>
+    </div>
+</section>
 
-</div>
-
+<!-- FOOTER -->
 <footer>
-    © <span id="year"></span> TORREBLU
+    © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
 
-<script src="script.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
