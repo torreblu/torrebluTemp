@@ -306,3 +306,65 @@ footer .back-to-top-link:hover {
     background: #0d3a7a;
     transform: scale(1.05);
 }
+
+/*marca de awa para el logo en index*/
+.hero {
+    position: relative;
+    padding: 60px 20px; /* Espacio alrededor del texto */
+    overflow: hidden;    /* Para que la marca de agua no sobresalga */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: url('assets/images/logo.jpeg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.05;      /* Más sutil aún */
+    filter: blur(8px);  /* Difumina la imagen */
+    z-index: 0;
+}
+
+.hero .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .hero::before {
+        width: 60%;
+        height: 60%;
+        filter: blur(6px);
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .hero::before {
+        width: 50%;
+        height: 50%;
+        filter: blur(4px);
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+
+
