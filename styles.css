@@ -12,7 +12,7 @@ body {
 }
 
 /* --- HEADER / NAVBAR --- */
-.topnav {
+header {
     width: 100%;
     background-color: #003366;
     padding: 15px 20px;
@@ -26,39 +26,39 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.topnav .logo {
+header .logo {
     color: #fff;
     font-weight: bold;
     font-size: 1.5rem;
     text-decoration: none;
 }
 
-.topnav ul {
+header ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
 
-.topnav ul li {
+header ul li {
     margin: 0;
 }
 
-.topnav ul li a {
+header ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
-.topnav ul li a:hover {
+header ul li a:hover {
     color: #00aaff;
 }
 
 /* --- HERO --- */
-.hero {
+section.hero {
     position: relative;
     padding: 100px 20px 80px 20px;
     overflow: hidden;
@@ -67,7 +67,7 @@ body {
     margin-top: 70px;
 }
 
-.hero::before {
+section.hero::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -82,26 +82,26 @@ body {
     z-index: 0;
 }
 
-.hero .wrap {
+section.hero div.wrap {
     position: relative;
     z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.hero h1 {
+section.hero h1 {
     font-size: 2.8rem;
     color: #001f3f;
     margin-bottom: 20px;
 }
 
-.hero p {
+section.hero p {
     font-size: 1.2rem;
     color: #004080;
 }
 
 /* --- BOTONES --- */
-.button, .btn-service {
+a.button, a.btn-service {
     display: inline-block;
     padding: 12px 30px;
     margin-top: 20px;
@@ -113,7 +113,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.button:hover, .btn-service:hover {
+a.button:hover, a.btn-service:hover {
     background: linear-gradient(90deg, #003366, #0059b3);
     transform: translateY(-2px);
 }
@@ -135,13 +135,13 @@ section p {
 }
 
 /* --- SECCIÓN DE SERVICIOS --- */
-.card-grid {
+div.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.service-card {
+div.service-card {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -150,29 +150,29 @@ section p {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-card:hover {
+div.service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-.service-card i {
+div.service-card i {
     font-size: 2.5rem;
     color: #0072e5;
     margin-bottom: 15px;
 }
 
-.service-card h3 {
+div.service-card h3 {
     font-size: 1.2rem;
     color: #001f3f;
     margin-bottom: 10px;
 }
 
-.service-card p {
+div.service-card p {
     font-size: 0.95rem;
     color: #003366;
 }
 
-.service-card a.btn-service {
+div.service-card a.btn-service {
     margin-top: 15px;
 }
 
@@ -187,44 +187,44 @@ footer {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
-    .hero h1 {
+    section.hero h1 {
         font-size: 2.4rem;
     }
-    .hero p {
+    section.hero p {
         font-size: 1.1rem;
     }
 }
 
 @media (max-width: 768px) {
-    .topnav ul {
-        gap: 15px;
+    header ul {
+        gap: 10px;
     }
-    .hero {
+    section.hero {
         padding: 80px 15px 60px 15px;
     }
-    .hero h1 {
+    section.hero h1 {
         font-size: 2rem;
     }
-    .hero p {
+    section.hero p {
         font-size: 1rem;
     }
-    .card-grid {
+    div.card-grid {
         gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero h1 {
+    section.hero h1 {
         font-size: 1.6rem;
     }
-    .hero p {
+    section.hero p {
         font-size: 0.95rem;
     }
-    .button, .btn-service {
+    a.button, a.btn-service {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    .card-grid {
+    div.card-grid {
         gap: 10px;
     }
 }
