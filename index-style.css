@@ -44,7 +44,7 @@ nav ul li a:hover {
 /* ==== HERO ==== */
 .hero {
   background: url("img/hero.jpg") center/cover no-repeat;
-  padding: 110px 20px;
+  padding: 75px 20px; /* REDUCIDO */
   text-align: center;
   color: white;
   position: relative;
@@ -62,60 +62,77 @@ nav ul li a:hover {
   position: relative;
   max-width: 700px;
   margin: auto;
+  animation: fadeDown 1s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  line-height: 1.2;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 25px;
+  opacity: 0.95;
 }
 
-/* ==== HERO BUTTONS ==== */
+/* ==== HERO BUTTONS (MEJORADOS) ==== */
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .btn-modern {
-  padding: 12px 22px;
-  border-radius: 50px;
-  background: white;
-  border: none;
-  font-size: 0.95rem;
+  padding: 12px 25px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 2px solid transparent;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #0051ff;
   cursor: pointer;
-  transition: 0.3s ease;
-  display: inline-block;
+  transition: 0.25s ease;
   text-decoration: none;
+  display: inline-block;
+
+  /* Animación suave */
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-modern:hover {
   background: #0051ff;
   color: white;
+  border-color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 81, 255, 0.3);
+  box-shadow: 0 6px 18px rgba(0, 81, 255, 0.3);
 }
 
 /* ==== PILARES ==== */
 .section {
-  padding: 60px 20px;
+  padding: 45px 20px; /* REDUCIDO */
   width: 90%;
   margin: auto;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.8rem;
+  margin-bottom: 35px;
+  font-size: 1.75rem;
   color: #222;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .pilares {
@@ -126,11 +143,17 @@ nav ul li a:hover {
 
 .pilar {
   background: #ffffff;
-  padding: 35px 25px;
-  border-radius: 12px;
+  padding: 30px 25px;
+  border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-align: center;
   transition: 0.3s ease;
+  animation: fadeUp 0.9s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .pilar:hover {
