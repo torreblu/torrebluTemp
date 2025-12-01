@@ -267,3 +267,24 @@ footer .back-to-top-link:hover {
     }
 }
 
+
+
+/* Botón "Solicitar este servicio" en la p+ágina de Servicios */
+.btn-service {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #1A54A6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.btn-service:hover {
+    background: #0d3a7a;
+    transform: scale(1.05);
+}
+
