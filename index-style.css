@@ -46,7 +46,7 @@ a {
     color: white;
     text-align: center;
     padding: 60px 20px; /* antes 100px */
-    height: 60vh; /* reducido */
+    height: 45vh; /* reducido */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,3 +160,4 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
