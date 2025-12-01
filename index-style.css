@@ -1,0 +1,174 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* 🔵 NAVBAR */
+.topnav {
+    background: #0a1730;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topnav nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.topnav a {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.topnav a:hover {
+    color: #85b6ff;
+}
+
+/* 🔵 HERO */
+.hero {
+    height: 85vh;
+    background: linear-gradient(to bottom, #0a1730d0, #0a1730e0), url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: #fff;
+    animation: slideUp 1.2s ease;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Botones HERO */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 2px solid #fff;
+}
+
+.btn.light {
+    background: transparent;
+    color: #fff;
+}
+
+.btn.light:hover {
+    background: #ffffff20;
+}
+
+.btn.dark {
+    background: #00b4ff;
+    color: #fff;
+    border-color: #00b4ff;
+}
+
+.btn.dark:hover {
+    background: #0093d3;
+}
+
+/* 🔵 SERVICIOS */
+.services {
+    background: #f7f9fb;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #0a1730;
+    margin-bottom: 40px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #0001;
+    transition: 0.3s;
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #00b4ff;
+    margin-bottom: 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #0002;
+}
+
+.btn-card {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    background: #0a1730;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-card:hover {
+    background: #14294f;
+}
+
+/* 🔵 FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0a1730;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* ANIMACIONES */
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
