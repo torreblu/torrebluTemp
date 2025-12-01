@@ -6,42 +6,106 @@
     <title>TORREBLU | Nuestros Valores</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <style>
+        /* Animación de entrada suave */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
         /* Recuadro pastel para slogan */
         .slogan-box {
-            background-color: #e0f0ff; /* azul pastel suave */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
+            background-color: #e0f0ff;
+            padding: 25px;
+            margin: 35px 0;
+            border-radius: 15px;
             text-align: center;
             font-style: italic;
             font-weight: bold;
-            color: #1A54A6; /* azul del tema */
+            color: #1A54A6;
+            border-left: 6px solid #1A54A6;
+            border-right: 6px solid #1A54A6;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         /* Lista de valores corporativos */
         .corporate-values {
-            list-style: disc;
-            padding-left: 20px;
-            margin-bottom: 30px;
+            list-style: none;
+            padding-left: 0;
         }
 
         .corporate-values li {
-            margin-bottom: 15px;
+            background: #f5f9ff;
+            margin-bottom: 18px;
+            padding: 15px 18px;
+            border-radius: 10px;
+            border-left: 5px solid #1A54A6;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.25s ease;
         }
 
-        /* Hero slogan pequeño opcional */
-        .hero-short-slogan {
-            margin-top: 10px;
-            font-size: 1.1em;
+        .corporate-values li:hover {
+            transform: scale(1.02);
+        }
+
+        .corporate-values i {
             color: #1A54A6;
+            font-size: 1.4em;
+            margin-top: 3px;
+        }
+
+        .hero-short-slogan {
+            margin-top: 12px;
+            font-size: 1.15em;
+            color: #1A54A6;
+            font-weight: 600;
             text-align: center;
         }
+
+        /* Cards misión / visión */
+        .info-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 6px solid #1A54A6;
+        }
+
+        /* Botones de acción */
+        .action-buttons {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .action-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background-color: #1A54A6;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.25s ease, transform 0.2s ease;
+        }
+
+        .action-buttons a:hover {
+            background-color: #17498f;
+            transform: scale(1.05);
+        }
+
     </style>
 </head>
 <body>
 
-<!-- 🔵 MENÚ SUPERIOR -->
 <header class="topnav">
     <nav>
         <a href="index.html">Inicio</a>
@@ -51,10 +115,10 @@
     </nav>
 </header>
 
-<!-- 🔵 HERO -->
-<section class="hero-banner">
+<section class="hero-banner fade-in">
     <h1>Nuestros Valores</h1>
     <p>Conoce la misión, visión y principios que guían a TORREBLU en cada proyecto.</p>
+
     <div class="hero-short-slogan">
         “Expertos en sistemas eléctricos y automatización para la industria y la agroindustria.”
     </div>
@@ -62,60 +126,73 @@
 
 <div class="wrap">
 
-    <!-- 🔵 SLOGAN CORPORATIVO -->
-    <div class="slogan-box">
+    <div class="slogan-box fade-in">
         “Energía que impulsa tu productividad.”
     </div>
 
-    <!-- 🔵 SECCIÓN DE VALORES CORPORATIVOS -->
-    <section class="values-section">
+    <section class="values-section fade-in">
         <h2 class="section-title">Valores Corporativos</h2>
+
         <ul class="corporate-values">
-            <li>
-                <strong>Innovación aplicada:</strong> Desarrollamos soluciones modernas basadas en investigación eléctrica y tecnologías emergentes.
+            <li><i class="fa-solid fa-bolt"></i>
+                <div><strong>Innovación aplicada:</strong> Soluciones modernas basadas en investigación eléctrica y tecnologías emergentes.</div>
             </li>
-            <li>
-                <strong>Confiabilidad técnica:</strong> Garantizamos resultados seguros y precisos en cada proyecto, servicio y producto.
+
+            <li><i class="fa-solid fa-shield-halved"></i>
+                <div><strong>Confiabilidad técnica:</strong> Garantizamos resultados seguros y precisos en cada proyecto y servicio.</div>
             </li>
-            <li>
-                <strong>Compromiso con el cliente:</strong> Brindamos atención personalizada y asesoría profesional orientada a resolver necesidades reales.
+
+            <li><i class="fa-solid fa-handshake-angle"></i>
+                <div><strong>Compromiso con el cliente:</strong> Atención personalizada orientada a resolver necesidades reales.</div>
             </li>
-            <li>
-                <strong>Eficiencia y sostenibilidad:</strong> Impulsamos el uso inteligente de la energía en la industria y el sector agrícola.
+
+            <li><i class="fa-solid fa-leaf"></i>
+                <div><strong>Eficiencia y sostenibilidad:</strong> Uso inteligente de la energía en industria y agro.</div>
             </li>
-            <li>
-                <strong>Integridad y responsabilidad:</strong> Actuamos con ética, transparencia y responsabilidad técnica en cada intervención.
+
+            <li><i class="fa-solid fa-scale-balanced"></i>
+                <div><strong>Integridad y responsabilidad:</strong> Ética, transparencia y responsabilidad técnica.</div>
             </li>
-            <li>
-                <strong>Excelencia operativa:</strong> Optimizamos continuamente nuestros procesos para entregar calidad superior.
+
+            <li><i class="fa-solid fa-award"></i>
+                <div><strong>Excelencia operativa:</strong> Mejora continua para entregar calidad superior.</div>
             </li>
         </ul>
-
-        <!-- 🔵 SECCIÓN DE MISIÓN Y VISIÓN -->
-        <h2 class="section-title">Misión</h2>
-        <p>
-            Nuestra misión es proporcionar soluciones integrales en energía y automatización, garantizando eficiencia, seguridad y satisfacción para todos nuestros clientes.
-        </p>
-
-        <h2 class="section-title">Visión</h2>
-        <p>
-            Ser reconocidos como líderes en innovación y confiabilidad en el sector eléctrico e industrial, fomentando el desarrollo sostenible y la excelencia en cada proyecto.
-        </p>
-          <p></p>
     </section>
+
+    <div class="info-card fade-in">
+        <h2>Misión</h2>
+        <p>Proporcionar soluciones integrales en energía y automatización, garantizando eficiencia, seguridad y satisfacción para todos nuestros clientes.</p>
+    </div>
+
+    <div class="info-card fade-in">
+        <h2>Visión</h2>
+        <p>Ser reconocidos como líderes en innovación y confiabilidad en el sector eléctrico e industrial, fomentando el desarrollo sostenible y la excelencia en cada proyecto.</p>
+    </div>
+
+    <!-- Botones CTA -->
+    <div class="action-buttons fade-in">
+        <a href="servicios.html"><i class="fa-solid fa-screwdriver-wrench"></i> Ver Servicios</a>
+        <a href="contacto.html"><i class="fa-solid fa-envelope"></i> Contacto</a>
+    </div>
 
 </div>
 
-<!-- 🔵 FOOTER -->
 <footer>
     © <span id="year"></span> TORREBLU
 </footer>
 
 <script>
-    // Actualiza el año automáticamente
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    ScrollReveal().reveal('.fade-in', {
+        delay: 120,
+        distance: '25px',
+        duration: 900,
+        easing: 'ease',
+        origin: 'bottom'
+    });
 </script>
 
 </body>
 </html>
-
