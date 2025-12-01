@@ -1,87 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio | Torre Blu</title>
-    <link rel="stylesheet" href="index-style.css">
+    <title>TORREBLU | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> 
 </head>
-
 <body>
 
-<!-- NAV -->
-<header>
+<!-- 🔵 MENÚ SUPERIOR -->
+<header class="topnav">
     <nav>
-        <h2>Torre Blu</h2>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+        <a href="servicios.html">Servicios</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>La energía de tu empresa</h1>
-        <p>Soluciones confiables y a medida para tus proyectos.</p>
+<!-- 🔵 HERO -->
+<section class="hero-banner">
+    <h1>La Energía de tu Empresa, en un solo lugar</h1>
+    <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
 
-        <div class="hero-buttons">
-            <a href="catalogo.html" class="btn-yellow">Ver catálogo</a>
-            <a href="cotizacion.html" class="btn-white">Solicitar cotización</a>
-            <a href="nuestrosvalores.html" class="btn-blue">Nuestros valores</a>
-        </div>
+    <div>
+        <a href="galeria.html" class="btn btn-white">Ver Catálogo</a>
+        <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
+        <a href="nuestrosvalores.html" class="btn btn-white">Nuestros valores</a>
     </div>
 </section>
 
-<!-- PILARES -->
-<section class="section">
-    <h2 class="section-title">Nuestros pilares de servicio</h2>
+<div class="wrap">
 
-    <div class="card-grid">
+    <!-- 🔵 SECCIÓN DE SERVICIOS -->
+    <section class="services-section">
+        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+        <div class="card-grid">
 
-        <!-- SEGURIDAD -->
-        <div class="card">
-            <div class="icon">
-                <svg width="70" height="70" viewBox="0 0 24 24" fill="#1A54A6">
-                    <path d="M12 2L4 5V11C4 16.52 7.84 21.74 12 23C16.16 21.74 20 16.52 20 11V5L12 2ZM12 4.18L18 6.46V11C18 15.52 15.11 19.86 12 21.54C8.89 19.86 6 15.52 6 11V6.46L12 4.18ZM11 14.17L8.83 12L7.41 13.41L11 17L17 11L15.59 9.59L11 14.17Z"/>
-                </svg>
+            <div class="service-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>Insumos Eléctricos</h3>
+                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
+                <a href="galeria.html" class="btn">Explorar</a>
             </div>
-            <h3>Seguridad</h3>
-            <p>Protocolos y equipos confiables para instalaciones críticas.</p>
-        </div>
 
-        <!-- COMPROMISO -->
-        <div class="card">
-            <div class="icon">
-                <svg width="70" height="70" viewBox="0 0 24 24" fill="#1A54A6">
-                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM16.59 8.58L10 15.17L7.41 12.59L6 14L10 18L18 10L16.59 8.58Z"/>
-                </svg>
+            <div class="service-card">
+                <i class="fa-solid fa-wrench"></i>
+                <h3>Instalaciones y Proformas</h3>
+                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
+                <a href="servicios.html" class="btn">Solicitar</a>
             </div>
-            <h3>Compromiso</h3>
-            <p>Acompañamiento completo antes, durante y después del proyecto.</p>
-        </div>
 
-        <!-- INNOVACIÓN -->
-        <div class="card">
-            <div class="icon">
-                <svg width="70" height="70" viewBox="0 0 24 24" fill="#1A54A6">
-                    <path d="M9 21H15V19H9V21ZM12 2C8.13 2 5 5.13 5 9C5 11.39 6.19 13.47 8 14.74V17H16V14.74C17.81 13.47 19 11.39 19 9C19 5.13 15.87 2 12 2ZM14 13.23L14 15H10L10 13.23C8.27 12.54 7 10.93 7 9C7 6.24 9.24 4 12 4C14.76 4 17 6.24 17 9C17 10.93 15.73 12.54 14 13.23Z"/>
-                </svg>
+            <div class="service-card">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Proyectos y Automatización</h3>
+                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
+                <a href="servicios.html" class="btn">Conocer Más</a>
             </div>
-            <h3>Innovación</h3>
-            <p>Soluciones modernas, eficientes y adaptadas a nuevas tecnologías.</p>
+
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- 🔵 SECCIÓN DE CATÁLOGO (opcional para contenido local) -->
+    <section class="catalog-section" id="catalogo">
+        <!-- Puedes dejar vacía o colocar un mensaje como "Visita nuestra galería" -->
+    </section>
 
-<!-- FOOTER -->
+</div>
+
+<!-- 🔵 FOOTER -->
 <footer>
-    © 2025 Torre Blu. Todos los derechos reservados.
+    © <span id="year"></span> TORREBLU
 </footer>
+
+<script>
+    // Actualiza el año automáticamente
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
