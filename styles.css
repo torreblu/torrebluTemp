@@ -35,51 +35,46 @@ html, body {
 }
 
 /* === HERO BANNER === */
-.hero-banner {
+.hero {
     background-color: var(--primary-blue);
     color: var(--text-light);
     padding: 80px 20px;
     text-align: center;
 }
 
-.hero-banner h1 {
+.hero h1 {
     font-size: 2.8em;
     margin-bottom: 10px;
 }
 
-.hero-banner p {
+.hero p {
     max-width: 700px;
     margin: 0 auto 30px;
     font-size: 1.1em;
 }
 
-.hero-banner .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
+/* === BOTONES HERO === */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 2rem;
+    background: #0056b8;
+    color: #fff;
     text-decoration: none;
-    transition: background 0.3s;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s ease;
+    border: 2px solid #0056b8;
 }
 
-.btn-blue {
-    background-color: var(--light-blue);
-    color: var(--text-light);
-    border: 2px solid var(--light-blue);
-}
-
-.btn-blue:hover {
-    background-color: #316dd3;
-}
-
-.btn-white {
-    background-color: var(--text-light);
-    color: var(--primary-blue);
-    border: 2px solid var(--text-light);
-}
-
-.btn-white:hover {
-    background-color: var(--bg-light);
+.hero-btn:hover {
+    background: #003f87;
+    border-color: #003f87;
 }
 
 /* === SECCIONES === */
@@ -91,19 +86,26 @@ html, body {
 }
 
 /* === TARJETAS Y GRID === */
-.card-grid {
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
 }
 
-.card-grid .card {
+.cards .card {
     background: var(--card-bg);
     padding: 30px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-subtle);
     text-align: center;
+}
+
+.cards .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
 }
 
 /* === PRODUCTOS / CATÁLOGO === */
@@ -221,10 +223,11 @@ footer .back-to-top-link:hover {
     z-index: 1000;
 }
 
-.topnav nav {
+.topnav ul {
     display: flex;
     justify-content: center;
     gap: 40px;
+    list-style: none;
 }
 
 .topnav a {
@@ -240,36 +243,21 @@ footer .back-to-top-link:hover {
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-    .hero-banner {
+    .hero {
         padding: 60px 20px;
     }
-    .hero-banner h1 {
+    .hero h1 {
         font-size: 2em;
     }
-    .engineering-services {
-        flex-direction: column;
+    .cards {
+        grid-template-columns: 1fr;
     }
-}
-
-
-
-/* === MAPA === */
-.map-container {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-@media (max-width: 768px) {
     .map-container {
-        height: 150px; /* un poco más pequeño en móvil */
+        height: 150px;
     }
 }
 
-
-
-/* Botón "Solicitar este servicio" en la p+ágina de Servicios */
+/* === BOTONES ESPECIALES === */
 .btn-service {
     display: inline-block;
     margin-top: 15px;
@@ -288,8 +276,6 @@ footer .back-to-top-link:hover {
     transform: scale(1.05);
 }
 
-/*para el inicio*/
-/* Botones especiales para las tarjetas del inicio */
 .card .btn-pill {
     display: inline-block;
     margin-top: 15px;
@@ -306,40 +292,3 @@ footer .back-to-top-link:hover {
     background: #0d3a7a;
     transform: scale(1.05);
 }
-
-
-/*otro para inicio*/
-/* Botones del hero */
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.hero-btn {
-    padding: 0.8rem 2rem;
-    background: #0056b8;          /* azul principal */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.25s ease;
-    border: 2px solid #0056b8;
-}
-
-.hero-btn:hover {
-    background: #003f87;          /* azul más oscuro */
-    border-color: #003f87;
-}
-
-/* Ajuste de imágenes dentro de tarjetas */
-.cards .card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-    opacity: 0.9;
-}
-
-
-
