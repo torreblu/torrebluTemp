@@ -259,5 +259,40 @@ footer {
 
 
 
+/* --- estilo para proyectos de CLIENTES --- */
+.clients-section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.clients-section .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 120px; /* altura uniforme */
+}
+
+.clients-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.clients-section .card img {
+    max-width: 100%;
+    max-height: 80px; /* para que todos tengan tamaño similar */
+    object-fit: contain;
+}
+
+
+
 
 
