@@ -1,85 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TORREBLU | Inicio</title>
-
-    <!-- Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Estilos reales -->
+    <title>Inicio - Torre Blu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- 🔵 MENÚ SUPERIOR -->
-<header class="topnav">
-    <nav>
-        <a href="servicios.html">Servicios</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
+<!-- NAV -->
+<header>
+    <nav class="topnav">
+        <div class="logo">Torre Blu</div>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
 </header>
 
-<!-- 🔵 HERO -->
-<section class="hero-banner">
-    <h1>La Energía de tu Empresa, en un solo lugar</h1>
-    <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos. TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
 
-    <div>
-        <a href="galeria.html" class="btn btn-white">Ver Catálogo</a>
-        <a href="contacto.html" class="btn btn-blue">Solicitar Cotización</a>
-        <a href="nuestrosvalores.html" class="btn btn-white">Nuestros valores</a>
+<!-- HERO -->
+<section class="hero">
+    <div class="wrap">
+        <h1>Soluciones que elevan tu tranquilidad</h1>
+        <p>Instalación profesional de cámaras, sistemas de seguridad y automatización para hogares y negocios.</p>
+
+        <div class="hero-buttons">
+            <a href="servicios.html" class="hero-btn">Explorar</a>
+            <a href="contacto.html" class="hero-btn">Solicitar</a>
+            <a href="nosotros.html" class="hero-btn">Conocer más</a>
+        </div>
     </div>
 </section>
 
-<div class="wrap">
 
-    <!-- 🔵 SECCIÓN DE SERVICIOS -->
-    <section>
-        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
+<!-- TARJETAS DE VALORES -->
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Nuestros pilares</h2>
 
-        <div class="card-grid">
-
-            <!-- TARJETA 1 -->
+        <div class="cards">
             <div class="card">
-                <i class="fa-solid fa-bolt" style="font-size:40px;color:#1A54A6;margin-bottom:10px;"></i>
-                <h3>Insumos Eléctricos</h3>
-                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                <a href="galeria.html" class="btn btn-blue" style="margin-top:15px;">Explorar</a>
+                <img src="assets/icons/shield.svg" alt="Seguridad">
+                <h3>Seguridad</h3>
+                <p>Protección confiable con equipos de alta calidad.</p>
             </div>
 
-            <!-- TARJETA 2 -->
             <div class="card">
-                <i class="fa-solid fa-wrench" style="font-size:40px;color:#1A54A6;margin-bottom:10px;"></i>
-                <h3>Instalaciones y Proformas</h3>
-                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
-                <a href="servicios.html" class="btn btn-blue" style="margin-top:15px;">Solicitar</a>
+                <img src="assets/icons/handshake.svg" alt="Compromiso">
+                <h3>Compromiso</h3>
+                <p>Acompañamiento desde la planificación hasta la instalación.</p>
             </div>
 
-            <!-- TARJETA 3 -->
             <div class="card">
-                <i class="fa-solid fa-robot" style="font-size:40px;color:#1A54A6;margin-bottom:10px;"></i>
-                <h3>Proyectos y Automatización</h3>
-                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
-                <a href="servicios.html" class="btn btn-blue" style="margin-top:15px;">Conocer Más</a>
+                <img src="assets/icons/innovation.svg" alt="Innovación">
+                <h3>Innovación</h3>
+                <p>Tecnología moderna para soluciones eficientes.</p>
             </div>
-
         </div>
-    </section>
+    </div>
+</section>
 
-</div>
 
-<!-- 🔵 FOOTER -->
+<!-- FOOTER -->
 <footer>
-    © <span id="year"></span> TORREBLU
+    <p>© 2025 Torre Blu – Todos los derechos reservados</p>
 </footer>
-
-<script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
