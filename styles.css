@@ -19,7 +19,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,13 @@ body {
 .topnav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li {
+    margin: 0;
 }
 
 .topnav ul li a {
@@ -44,6 +50,7 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    padding: 5px 0;
 }
 
 .topnav ul li a:hover {
@@ -57,7 +64,7 @@ body {
     overflow: hidden;
     background-color: #e0e8f5;
     text-align: center;
-    margin-top: 70px; /* espacio para header fijo */
+    margin-top: 70px;
 }
 
 .hero::before {
@@ -201,6 +208,9 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+    .card-grid {
+        gap: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -215,6 +225,6 @@ footer {
         font-size: 0.9rem;
     }
     .card-grid {
-        gap: 15px;
+        gap: 10px;
     }
 }
