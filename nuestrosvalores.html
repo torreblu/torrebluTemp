@@ -3,84 +3,92 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuestros Valores</title>
+    <title>TORREBLU | Nuestros Valores</title>
     <link rel="stylesheet" href="styles.css" />
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #003366; color: white; padding: 15px; }
-        nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
-        main { padding: 20px; max-width: 900px; margin: auto; }
-        h1, h2 { color: #003366; }
-        .pastel-box { background: #e8f0ff; padding: 15px; border-radius: 10px; margin-bottom: 20px; }
-        ul { margin-left: 20px; }
-        .extras { margin-top: 40px; }
-        .extra-block { background: #f4f8ff; padding: 15px; border-radius: 12px; margin-bottom: 20px; }
-        .cta { background: #003366; color: white; padding: 10px 15px; border-radius: 8px; text-decoration: none; }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="galeria.html">Galería</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
 
-    <main>
+<!-- NAV -->
+<header class="topnav">
+    <div class="logo">TORREBLU</div>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="nuestrosvalores.html" class="active">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="wrap">
         <h1>Valores Corporativos</h1>
+        <p>Descubre nuestros principios y compromiso con la excelencia técnica y ética profesional.</p>
+    </div>
+</section>
 
-        <ul>
-            <li><strong>Innovación aplicada:</strong> Soluciones modernas basadas en investigación eléctrica y tecnologías emergentes.</li>
-            <li><strong>Confiabilidad técnica:</strong> Resultados seguros y precisos en cada proyecto.</li>
-            <li><strong>Compromiso con el cliente:</strong> Atención personalizada orientada a resolver necesidades reales.</li>
-            <li><strong>Eficiencia y sostenibilidad:</strong> Uso inteligente de la energía en industria y agroindustria.</li>
-            <li><strong>Integridad y responsabilidad:</strong> Ética, transparencia y responsabilidad técnica.</li>
-            <li><strong>Excelencia operativa:</strong> Procesos optimizados para entregar calidad superior.</li>
-        </ul>
+<!-- TARJETAS DE VALORES -->
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Nuestros Principios</h2>
 
-        <h2>Slogan Corporativo</h2>
-        <div class="pastel-box">
-            <p><strong>“Energía que impulsa tu productividad.”</strong></p>
-        </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Innovación Aplicada</h3>
+                <p>Soluciones modernas basadas en investigación eléctrica y tecnologías emergentes.</p>
+            </div>
 
-        <h3>Slogans alternativos:</h3>
-        <ul>
-            <li>Tecnología eléctrica para un campo más eficiente.</li>
-            <li>Innovación y energía para tu crecimiento.</li>
-            <li>Soluciones eléctricas que hacen avanzar tu negocio.</li>
-        </ul>
+            <div class="card">
+                <h3>Confiabilidad Técnica</h3>
+                <p>Resultados seguros y precisos en cada proyecto.</p>
+            </div>
 
-        <h2>Frase para el encabezado (Hero Section)</h2>
-        <p><em>“Expertos en sistemas eléctricos y automatización para la industria y la agroindustria.”</em></p>
+            <div class="card">
+                <h3>Compromiso con el Cliente</h3>
+                <p>Atención personalizada orientada a resolver necesidades reales.</p>
+            </div>
 
-        <section class="extras">
-            <div class="extra-block">
-                <h2>Misión</h2>
+            <div class="card">
+                <h3>Eficiencia y Sostenibilidad</h3>
+                <p>Uso inteligente de la energía en industria y agroindustria.</p>
+            </div>
+
+            <div class="card">
+                <h3>Integridad y Responsabilidad</h3>
+                <p>Ética, transparencia y responsabilidad técnica.</p>
+            </div>
+
+            <div class="card">
+                <h3>Excelencia Operativa</h3>
+                <p>Procesos optimizados para entregar calidad superior.</p>
+            </div>
+
+            <div class="card">
+                <h3>Misión</h3>
                 <p>Brindar soluciones eléctricas y de automatización que aumenten la eficiencia y confiabilidad en industria y agroindustria.</p>
             </div>
 
-            <div class="extra-block">
-                <h2>Visión</h2>
+            <div class="card">
+                <h3>Visión</h3>
                 <p>Ser referentes en soluciones eléctricas innovadoras y sostenibles.</p>
             </div>
+        </div>
 
-            <div class="extra-block">
-                <h2>Solicitar este servicio</h2>
-                <a class="cta" href="#contacto">Ir a contacto</a>
-            </div>
+        <div class="wrap" style="text-align:center; margin-top:30px;">
+            <a href="contacto.html" class="btn-service">Solicitar Asesoría</a>
+        </div>
+    </div>
+</section>
 
-            <div class="extra-block">
-                <h2>CTA destacado</h2>
-                <p>Contáctanos para una asesoría técnica profesional.</p>
-            </div>
+<!-- FOOTER -->
+<footer>
+    © <span id="year"></span> TORREBLU – Todos los derechos reservados
+</footer>
 
-            <div class="extra-block">
-                <h2>Footer ampliado</h2>
-                <p>© 2025 Soluciones Eléctricas. Ingeniería, energía y automatización.</p>
-            </div>
-        </section>
-    </main>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
