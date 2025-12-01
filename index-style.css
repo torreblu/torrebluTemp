@@ -3,14 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+/* ==== VARIABLES (MISMOS COLORES DEL SITIO) ==== */
+:root {
+  --primary-blue: #1A54A6;
+  --light-blue: #3E84F5;
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #f5f5f5;
+  --card-bg: #fff;
+  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* ==== NAV ==== */
 header {
-  background: #ffffff;
+  background: #0a0a23;
   padding: 15px 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -24,6 +34,11 @@ nav {
   align-items: center;
 }
 
+nav h2 {
+  color: var(--text-light);
+  font-size: 22px;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -32,19 +47,19 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-light);
   font-weight: 600;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #0051ff;
+  color: #2fb3ff;
 }
 
 /* ==== HERO ==== */
 .hero {
   background: url("img/hero.jpg") center/cover no-repeat;
-  padding: 75px 20px; /* REDUCIDO */
+  padding: 110px 20px;
   text-align: center;
   color: white;
   position: relative;
@@ -55,84 +70,58 @@ nav ul li a:hover {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
 }
 
 .hero-content {
   position: relative;
   max-width: 700px;
   margin: auto;
-  animation: fadeDown 1s ease;
-}
-
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero h1 {
-  font-size: 2.3rem;
-  margin-bottom: 10px;
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   margin-bottom: 25px;
-  opacity: 0.95;
 }
 
-/* ==== HERO BUTTONS (MEJORADOS) ==== */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
+/* ==== BOTONES ==== */
 .btn-modern {
-  padding: 12px 25px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 2px solid transparent;
-  font-size: 0.9rem;
+  padding: 12px 22px;
+  border-radius: 50px;
+  background: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #0051ff;
+  color: var(--text-light);
   cursor: pointer;
-  transition: 0.25s ease;
+  transition: 0.3s ease;
   text-decoration: none;
-  display: inline-block;
-
-  /* Animación suave */
-  position: relative;
-  overflow: hidden;
 }
 
 .btn-modern:hover {
-  background: #0051ff;
-  color: white;
-  border-color: #ffffff;
+  background: #0d3a7a;
+  border-color: #0d3a7a;
   transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 81, 255, 0.3);
 }
 
 /* ==== PILARES ==== */
 .section {
-  padding: 45px 20px; /* REDUCIDO */
+  padding: 60px 20px;
   width: 90%;
   margin: auto;
 }
 
 .section h2 {
   text-align: center;
-  margin-bottom: 35px;
-  font-size: 1.75rem;
-  color: #222;
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  color: var(--primary-blue);
 }
 
 .pilares {
@@ -142,18 +131,12 @@ nav ul li a:hover {
 }
 
 .pilar {
-  background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: var(--card-bg);
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-subtle);
   text-align: center;
   transition: 0.3s ease;
-  animation: fadeUp 0.9s ease;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 .pilar:hover {
@@ -169,12 +152,14 @@ nav ul li a:hover {
 .pilar h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  color: var(--primary-blue);
 }
 
 /* ==== FOOTER ==== */
 footer {
-  background: #f2f2f2;
+  background: var(--primary-blue);
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  color: var(--text-light);
 }
