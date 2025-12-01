@@ -65,8 +65,8 @@ section.hero::before {
     transform: translate(-50%, -50%);
     background: url('assets/images/logo.jpeg') no-repeat center center;
     background-size: contain;
-    opacity: 0.1;
-    filter: blur(6px);
+    opacity: 0.35; /* acá debo revisar el logo*/
+    filter: blur(2px); /* filter y opacity*/
     z-index: 0;
 }
 
@@ -223,3 +223,4 @@ footer {
         gap: 10px;
     }
 }
+
