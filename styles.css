@@ -86,14 +86,16 @@ html, body {
 }
 
 /* === TARJETAS Y GRID === */
-.cards {
+.cards,
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-bottom: 40px;
 }
 
-.cards .card {
+.cards .card,
+.card-grid .service-card {
     background: var(--card-bg);
     padding: 30px;
     border-radius: var(--border-radius);
@@ -101,11 +103,19 @@ html, body {
     text-align: center;
 }
 
-.cards .card img {
+.cards .card img,
+.card-grid .service-card i {
     width: 60px;
     height: 60px;
     margin-bottom: 1rem;
     opacity: 0.9;
+}
+
+.cards .card i,
+.card-grid .service-card i {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
 }
 
 /* === PRODUCTOS / CATÁLOGO === */
@@ -237,7 +247,8 @@ footer .back-to-top-link:hover {
     font-size: 18px;
 }
 
-.topnav a:hover {
+.topnav a:hover,
+.topnav a.active {
     color: #2fb3ff;
 }
 
@@ -249,7 +260,8 @@ footer .back-to-top-link:hover {
     .hero h1 {
         font-size: 2em;
     }
-    .cards {
+    .cards,
+    .card-grid {
         grid-template-columns: 1fr;
     }
     .map-container {
@@ -258,7 +270,8 @@ footer .back-to-top-link:hover {
 }
 
 /* === BOTONES ESPECIALES === */
-.btn-service {
+.btn-service,
+.card-grid .service-card .btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 18px;
@@ -271,7 +284,8 @@ footer .back-to-top-link:hover {
     font-size: 0.95rem;
 }
 
-.btn-service:hover {
+.btn-service:hover,
+.card-grid .service-card .btn:hover {
     background: #0d3a7a;
     transform: scale(1.05);
 }
