@@ -324,7 +324,7 @@ footer .back-to-top-link:hover {
     transform: translate(-50%, -50%);
     background: url('assets/images/logo.jpeg') no-repeat center center;
     background-size: contain;
-    opacity: 0.05;      /* Más sutil aún */
+    opacity: 0.15;      /* Más sutil aún */
     filter: blur(8px);  /* Difumina la imagen */
     z-index: 0;
 }
@@ -365,6 +365,7 @@ footer .back-to-top-link:hover {
         font-size: 1rem;
     }
 }
+
 
 
 
