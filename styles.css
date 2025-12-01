@@ -1,53 +1,290 @@
-.hero {
-    position: relative;
-    padding: 60px 20px;
-    overflow: hidden;
-    background-color: #e6f2ff; /* Azul muy claro */
+/* === VARIABLES === */
+:root {
+    --primary-blue: #1A54A6;
+    --light-blue: #3E84F5;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f5f5f5;
+    --card-bg: #fff;
+    --border-radius: 8px;
+    --shadow-subtle: 0 4px 10px rgba(0,0,0,0.08);
+    --accent-yellow: #fdd835;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%, -50%);
-    background: url('assets/images/logo.jpeg') no-repeat center center;
-    background-size: contain;
-    opacity: 0.15;
-    filter: blur(6px);
-    z-index: 0;
+/* === RESET BÁSICO === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.hero .wrap {
-    position: relative;
-    z-index: 1;
+html, body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* === CONTENEDOR GENERAL === */
+.wrap {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HERO BANNER === */
+.hero-banner {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-banner h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.hero-banner .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-blue {
+    background-color: var(--light-blue);
+    color: var(--text-light);
+    border: 2px solid var(--light-blue);
+}
+
+.btn-blue:hover {
+    background-color: #316dd3;
+}
+
+.btn-white {
+    background-color: var(--text-light);
+    color: var(--primary-blue);
+    border: 2px solid var(--text-light);
+}
+
+.btn-white:hover {
+    background-color: var(--bg-light);
+}
+
+/* === SECCIONES === */
+.section-title {
+    text-align: center;
+    font-size: 1.8em;
+    margin: 40px 0 30px;
+    color: var(--primary-blue);
+}
+
+/* === TARJETAS Y GRID === */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card-grid .card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-subtle);
+    text-align: center;
+}
+
+/* === PRODUCTOS / CATÁLOGO === */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin: 10px 0;
+}
+
+.product-card .details {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.product-card .quote-btn {
+    background-color: var(--accent-yellow);
+    color: var(--text-dark);
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background 0.3s;
+}
+
+.product-card .quote-btn:hover {
+    background-color: #fbc02d;
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.contact-form-section input,
+.contact-form-section select,
+.contact-form-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.contact-form-section textarea {
+    min-height: 120px;
+}
+
+.contact-form-section .btn {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* === MAPA / PLACEHOLDER === */
+.map-placeholder {
+    height: 300px;
+    background: #ccc;
+    text-align: center;
+    line-height: 300px;
+    color: #666;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+footer .back-to-top-link {
+    display: block;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: var(--accent-yellow);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .back-to-top-link:hover {
+    color: #ffd600;
+}
+
+/* === NAVEGACIÓN SUPERIOR === */
+.topnav {
+    width: 100%;
+    background: #0a0a23;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.topnav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav a:hover {
+    color: #2fb3ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 60px 20px;
+    }
+    .hero-banner h1 {
+        font-size: 2em;
+    }
+    .engineering-services {
+        flex-direction: column;
+    }
+}
+
+
+
+/* === MAPA === */
+.map-container {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
-    .hero::before {
-        width: 60%;
-        height: 60%;
-        filter: blur(5px);
-    }
-    .hero {
-        padding: 40px 15px;
+    .map-container {
+        height: 150px; /* un poco más pequeño en móvil */
     }
 }
 
-@media (max-width: 480px) {
-    .hero::before {
-        width: 50%;
-        height: 50%;
-        filter: blur(4px);
-    }
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    .hero p {
-        font-size: 1rem;
-    }
+
+
+/* Botón "Solicitar este servicio" en la p+ágina de Servicios */
+.btn-service {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #1A54A6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 0.95rem;
 }
+
+.btn-service:hover {
+    background: #0d3a7a;
+    transform: scale(1.05);
+}
+
