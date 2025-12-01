@@ -2,7 +2,7 @@
     position: relative;
     padding: 60px 20px;
     overflow: hidden;
-    background-color: #e6f2ff;
+    background-color: #e6f2ff; /* Azul muy claro */
 }
 
 .hero::before {
@@ -15,9 +15,8 @@
     transform: translate(-50%, -50%);
     background: url('assets/images/logo.jpeg') no-repeat center center;
     background-size: contain;
-    opacity: 0.35;
-    filter: blur(2px);
-    mix-blend-mode: lighten;
+    opacity: 0.15;
+    filter: blur(6px);
     z-index: 0;
 }
 
@@ -32,7 +31,7 @@
     .hero::before {
         width: 60%;
         height: 60%;
-        filter: blur(2px);
+        filter: blur(5px);
     }
     .hero {
         padding: 40px 15px;
@@ -43,7 +42,7 @@
     .hero::before {
         width: 50%;
         height: 50%;
-        filter: blur(1px);
+        filter: blur(4px);
     }
     .hero h1 {
         font-size: 1.5rem;
