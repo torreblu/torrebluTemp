@@ -1,86 +1,81 @@
-/* ================================
+/* ============================
    ESTILOS GENERALES
-================================ */
+============================ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f7fb;
+    background-color: #f8f9fc;
     color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* ================================
-   NAVBAR
-================================ */
+/* ============================
+   MENÚ SUPERIOR
+============================ */
 .topnav {
     background: #1A54A6;
-    padding: 12px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.topnav nav {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
+    padding: 12px 0;
+    text-align: center;
 }
 
 .topnav a {
-    color: #fff;
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    font-size: 1rem;
 }
 
 .topnav a:hover {
-    opacity: 0.8;
+    color: #cfe2ff;
 }
 
-/* ================================
-   HERO / BANNER PRINCIPAL
-================================ */
-.hero {
-    background: linear-gradient(135deg, #1A54A6, #4FA3FF);
+/* ============================
+   HERO (AJUSTADO)
+============================ */
+.hero-banner {
+    background: linear-gradient(135deg, #1A54A6, #1f6ed4);
     color: white;
     text-align: center;
-    padding: 60px 20px; /* antes 100px */
-    height: 45vh; /* reducido */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    animation: fadeIn 1.2s ease-in-out;
+
+    padding: 50px 20px 60px;   /* ANTES: 90px 20px 120px */
+    margin-bottom: 20px;       /* Reduce espacio hacia abajo */
+
+    animation: fadeIn 0.8s ease-out;
 }
 
-.hero h1 {
-    font-size: 34px; /* reducido */
-    margin-bottom: 10px;
+.hero-banner h1 {
+    font-size: 2.2rem;  /* ANTES: 2.7rem */
     font-weight: bold;
+    margin-bottom: 12px;
 }
 
-.hero p {
-    font-size: 15px; /* reducido */
+.hero-banner p {
+    font-size: 1.1rem;  /* más compacto */
     max-width: 700px;
-    margin: 0 auto 15px;
+    margin: auto;
+    margin-bottom: 18px;  /* menos espacio */
 }
 
-/* Animación suave */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
+.hero-banner .btn {
+    margin: 6px;  /* antes 10px */
 }
 
-/* ================================
+/* ============================
    BOTONES
-================================ */
+============================ */
 .btn {
     display: inline-block;
-    padding: 10px 18px; /* reducido */
-    border-radius: 8px;
-    font-size: 14px; /* reducido */
-    margin: 5px;
-    transition: 0.3s;
+    padding: 10px 20px; /* antes 14px 26px */
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s;
 }
 
 .btn-white {
@@ -90,43 +85,40 @@ a {
 }
 
 .btn-white:hover {
-    background: transparent;
-    color: #fff;
+    background: #e6e6e6;
+    border-color: #e6e6e6;
 }
 
 .btn-blue {
-    background: #003f8c;
+    background: #003f99;
     color: white;
-    border: 2px solid #003f8c;
+    border: 2px solid #003f99;
 }
 
 .btn-blue:hover {
-    background: transparent;
-    border-color: white;
+    background: #002f73;
+    border-color: #002f73;
 }
 
-/* ================================
-   CONTENEDOR GENERAL
-================================ */
-.wrap {
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 20px;
+/* ============================
+   SECCIÓN DE SERVICIOS (SUBE)
+============================ */
+.services-section {
+    margin-top: 10px; /* ANTES: 40-60px */
 }
 
-/* ================================
-   SECCIONES DE SERVICIOS
-================================ */
 .section-title {
     text-align: center;
-    font-size: 26px;
-    margin-bottom: 25px;
-    color: #1A54A6;
+    font-size: 1.9rem;
+    margin-bottom: 30px;
 }
 
+/* ============================
+   TARJETAS
+============================ */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 25px;
 }
 
@@ -135,29 +127,36 @@ a {
     padding: 25px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    transition: 0.3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.25s;
 }
 
 .service-card i {
-    font-size: 45px;
-    color: #1A54A6;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #1A54A6;
 }
 
 .service-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ================================
+/* ============================
    FOOTER
-================================ */
+============================ */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
+    margin-top: 40px;
     background: #1A54A6;
     color: white;
-    margin-top: 40px;
 }
 
+/* ============================
+   ANIMACIONES
+============================ */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
