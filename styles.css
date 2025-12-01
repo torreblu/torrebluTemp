@@ -21,12 +21,12 @@ body {
     left: 0;
     z-index: 999;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center; /* centra hijos inline o inline-block */
+    text-align: center;
 }
 
 .topnav ul {
     list-style: none;
-    display: inline-flex; /* centrado con text-align del padre */
+    display: inline-flex;
     gap: 25px;
     margin: 0;
     padding: 0;
@@ -40,7 +40,8 @@ body {
     padding: 5px 10px;
 }
 
-.topnav ul li a:hover {
+.topnav ul li a:hover,
+.topnav ul li a.active {
     color: #00aaff;
 }
 
@@ -64,7 +65,7 @@ section.hero::before {
     transform: translate(-50%, -50%);
     background: url('assets/images/logo.jpeg') no-repeat center center;
     background-size: contain;
-    opacity: 0.15;
+    opacity: 0.1;
     filter: blur(6px);
     z-index: 0;
 }
@@ -113,22 +114,24 @@ section {
 section h2 {
     font-size: 2rem;
     color: #001f3f;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 section p {
     font-size: 1rem;
     color: #003366;
+    text-align: center;
 }
 
-/* --- SECCIÓN DE SERVICIOS --- */
-div.card-grid {
+/* --- CUADRÍCULAS --- */
+div.cards, div.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-div.service-card {
+div.card, div.service-card {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -137,30 +140,35 @@ div.service-card {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-div.service-card:hover {
+div.card:hover, div.service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-div.service-card i {
-    font-size: 2.5rem;
-    color: #0072e5;
+div.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
     margin-bottom: 15px;
 }
 
-div.service-card h3 {
+div.card h3, div.service-card h3 {
     font-size: 1.2rem;
     color: #001f3f;
     margin-bottom: 10px;
 }
 
-div.service-card p {
+div.card p, div.service-card p {
     font-size: 0.95rem;
     color: #003366;
 }
 
-div.service-card a.btn-service {
-    margin-top: 15px;
+/* --- VALORES --- */
+div.cards-section .card {
+    border-left: 4px solid #0072e5;
+    padding-left: 15px;
+    text-align: left;
 }
 
 /* --- FOOTER --- */
@@ -195,7 +203,7 @@ footer {
     section.hero p {
         font-size: 1rem;
     }
-    div.card-grid {
+    div.cards, div.card-grid {
         gap: 15px;
     }
 }
@@ -211,7 +219,7 @@ footer {
         padding: 10px 20px;
         font-size: 0.9rem;
     }
-    div.card-grid {
+    div.cards, div.card-grid {
         gap: 10px;
     }
 }
