@@ -6,20 +6,17 @@
     <title>Inicio - Torre Blu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <!-- NAV -->
-<header>
-    <nav class="topnav">
-        <div class="logo">Torre Blu</div>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+<header class="topnav">
+    <div class="logo">TORREBLU</div>
+    <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+    </ul>
 </header>
 
 <!-- HERO -->
@@ -41,7 +38,7 @@
     <div class="wrap">
         <h2 class="section-title">Nuestros pilares</h2>
 
-        <div class="cards">
+        <div class="card-grid cards">
             <div class="card">
                 <img src="assets/icons/shield.svg" alt="Seguridad">
                 <h3>Seguridad</h3>
@@ -65,8 +62,12 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2025 Torre Blu – Todos los derechos reservados</p>
+    © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
