@@ -1,165 +1,199 @@
-/* ==== RESET ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* ==== VARIABLES (MISMOS COLORES DEL SITIO) ==== */
+/* === VARIABLES (idénticas al resto del sitio) === */
 :root {
-  --primary-blue: #1A54A6;
-  --light-blue: #3E84F5;
-  --text-dark: #333;
-  --text-light: #fff;
-  --bg-light: #f5f5f5;
-  --card-bg: #fff;
-  --shadow-subtle: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --primary-blue: #1A54A6;
+    --light-blue: #3E84F5;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-light: #f5f5f5;
+    --card-bg: #fff;
+    --border-radius: 8px;
+    --shadow-subtle: 0 4px 10px rgba(0,0,0,0.08);
+    --accent-yellow: #fdd835;
 }
 
-/* ==== NAV ==== */
-header {
-  background: #0a0a23;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+html, body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-nav h2 {
-  color: var(--text-light);
-  font-size: 22px;
+/* === TOP NAV === */
+.topnav {
+    width: 100%;
+    background: #0a0a23;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
+.topnav nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--text-light);
-  font-weight: 600;
-  transition: 0.3s;
+.topnav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-nav ul li a:hover {
-  color: #2fb3ff;
+.topnav a:hover {
+    color: #2fb3ff;
 }
 
-/* ==== HERO ==== */
+/* === HERO === */
 .hero {
-  background: url("img/hero.jpg") center/cover no-repeat;
-  padding: 110px 20px;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.45);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 700px;
-  margin: auto;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 15px;
-  line-height: 1.2;
+    font-size: 2.7rem;
+    margin-bottom: 10px;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
 }
 
-/* ==== BOTONES ==== */
-.btn-modern {
-  padding: 12px 22px;
-  border-radius: 50px;
-  background: var(--primary-blue);
-  border: 2px solid var(--primary-blue);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-light);
-  cursor: pointer;
-  transition: 0.3s ease;
-  text-decoration: none;
+/* === HERO BUTTON GROUP === */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
-.btn-modern:hover {
-  background: #0d3a7a;
-  border-color: #0d3a7a;
-  transform: translateY(-3px);
+.hero-buttons a {
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.25s;
+    border: 2px solid transparent;
 }
 
-/* ==== PILARES ==== */
-.section {
-  padding: 60px 20px;
-  width: 90%;
-  margin: auto;
+/* Botón catálogo */
+.btn-yellow {
+    background: var(--accent-yellow);
+    color: #000;
+}
+.btn-yellow:hover {
+    background: #fbc02d;
 }
 
-.section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 1.8rem;
-  color: var(--primary-blue);
+/* Botón cotización */
+.btn-white {
+    background: var(--text-light);
+    color: var(--primary-blue);
+    border-color: var(--text-light);
+}
+.btn-white:hover {
+    background: #e6e6e6;
 }
 
-.pilares {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+/* Botón valores */
+.btn-blue {
+    background: var(--light-blue);
+    color: var(--text-light);
+    border-color: var(--light-blue);
+}
+.btn-blue:hover {
+    background: #316dd3;
 }
 
-.pilar {
-  background: var(--card-bg);
-  padding: 35px 25px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-subtle);
-  text-align: center;
-  transition: 0.3s ease;
+/* === SECCIÓN PILARES === */
+.section-title {
+    text-align: center;
+    font-size: 1.9rem;
+    color: var(--primary-blue);
+    margin: 40px 0 25px;
 }
 
-.pilar:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+.card-grid {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-.pilar img {
-  width: 55px;
-  margin-bottom: 15px;
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
 }
 
-.pilar h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: var(--primary-blue);
+.card i {
+    font-size: 2.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
 }
 
-/* ==== FOOTER ==== */
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* === SECCIÓN IMAGEN DESTACADA === */
+.feature-section {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.feature-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.feature-section p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
+}
+
+/* === FOOTER === */
 footer {
-  background: var(--primary-blue);
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  color: var(--text-light);
+    text-align: center;
+    background: var(--primary-blue);
+    color: var(--text-light);
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
 }
