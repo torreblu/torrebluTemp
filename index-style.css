@@ -1,4 +1,4 @@
-/* === VARIABLES (idénticas al resto del sitio) === */
+/* === VARIABLES === */
 :root {
     --primary-blue: #1A54A6;
     --light-blue: #3E84F5;
@@ -26,8 +26,8 @@ html, body {
     line-height: 1.6;
 }
 
-/* === TOP NAV === */
-.topnav {
+/* === NAV (igual al resto del sitio) === */
+header {
     width: 100%;
     background: #0a0a23;
     padding: 15px 0;
@@ -36,20 +36,37 @@ html, body {
     z-index: 1000;
 }
 
-.topnav nav {
+header nav {
+    max-width: 1200px;
+    margin: auto;
+
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
 }
 
-.topnav a {
+header h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+header ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+header a {
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 17px;
 }
 
-.topnav a:hover {
+header a:hover {
     color: #2fb3ff;
 }
 
@@ -67,116 +84,96 @@ html, body {
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     margin-bottom: 25px;
 }
 
-/* === HERO BUTTON GROUP === */
+/* === BOTONES EXCLUSIVOS DEL INICIO === */
 .hero-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 15px;
 }
 
-.hero-buttons a {
-    padding: 12px 22px;
-    border-radius: 8px;
+.btn-modern {
+    padding: 12px 24px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.25s;
-    border: 2px solid transparent;
-}
-
-/* Botón catálogo */
-.btn-yellow {
-    background: var(--accent-yellow);
-    color: #000;
-}
-.btn-yellow:hover {
-    background: #fbc02d;
-}
-
-/* Botón cotización */
-.btn-white {
-    background: var(--text-light);
+    background: white;
     color: var(--primary-blue);
-    border-color: var(--text-light);
-}
-.btn-white:hover {
-    background: #e6e6e6;
+    border: 2px solid white;
+    transition: 0.25s ease;
 }
 
-/* Botón valores */
-.btn-blue {
-    background: var(--light-blue);
-    color: var(--text-light);
-    border-color: var(--light-blue);
-}
-.btn-blue:hover {
-    background: #316dd3;
+.btn-modern:hover {
+    background: #eaeaea;
+    border-color: #eaeaea;
 }
 
 /* === SECCIÓN PILARES === */
-.section-title {
+.section {
+    margin-top: 50px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.section h2 {
     text-align: center;
     font-size: 1.9rem;
     color: var(--primary-blue);
-    margin: 40px 0 25px;
+    margin-bottom: 35px;
 }
 
-.card-grid {
+/* GRID */
+.pilares {
     max-width: 1200px;
-    margin: 0 auto 50px;
-    padding: 0 20px;
+    margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
 }
 
-.card {
+/* TARJETAS */
+.pilar {
     background: var(--card-bg);
-    padding: 30px;
-    border-radius: var(--border-radius);
+    padding: 28px 22px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: var(--shadow-subtle);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.card i {
-    font-size: 2.3rem;
+.pilar:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* ICONOS / IMÁGENES */
+.pilar img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+    opacity: 0.9;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* TÍTULO */
+.pilar h3 {
+    font-size: 1.25rem;
     color: var(--primary-blue);
-    margin-bottom: 12px;
-}
-
-.card h3 {
-    font-size: 1.3rem;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-.card p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* === SECCIÓN IMAGEN DESTACADA === */
-.feature-section {
-    background: var(--primary-blue);
-    color: var(--text-light);
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.feature-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-.feature-section p {
-    max-width: 800px;
-    margin: auto;
-    font-size: 1rem;
+/* TEXTO */
+.pilar p {
+    font-size: 0.93rem;
+    color: #444;
+    line-height: 1.45;
 }
 
 /* === FOOTER === */
@@ -186,6 +183,7 @@ footer {
     color: var(--text-light);
     padding: 20px;
     font-size: 0.9rem;
+    margin-top: 40px;
 }
 
 /* === RESPONSIVE === */
