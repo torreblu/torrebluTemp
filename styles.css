@@ -11,7 +11,68 @@ body {
     color: #001f3f;
 }
 
+
+
+/**/
 /* --- HEADER / NAVBAR CENTRADA --- */
+.topnav {
+    width: 100%;
+    background-color: #003366;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.topnav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* 👉 permite que los enlaces bajen de línea */
+    justify-content: center; /* 👉 centrado */
+    gap: 12px 20px; /* 👉 espacio vertical y horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 6px 12px;
+    white-space: nowrap; /* 👉 evita que se rompan palabras */
+}
+
+.topnav ul li a:hover,
+.topnav ul li a.active {
+    color: #00aaff;
+}
+
+/* --- Ajustes móviles --- */
+@media (max-width: 480px) {
+    .topnav {
+        padding: 12px;
+    }
+
+    .topnav ul {
+        gap: 10px 12px;
+    }
+
+    .topnav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
+
+
+/**/
+
+
+/* --- HEADER / NAVBAR CENTRADA --- */
+/*
 .topnav {
     width: 100%;
     background-color: #003366;
@@ -44,6 +105,10 @@ body {
 .topnav ul li a.active {
     color: #00aaff;
 }
+
+*/
+
+
 
 /* --- HERO --- */
 section.hero {
@@ -353,6 +418,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
