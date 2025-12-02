@@ -21,34 +21,47 @@
         <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
     </audio>
 -->
-   <audio id="musica" autoplay loop muted>
+  <audio id="musica" loop>
     <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
 </audio>
 
+<button id="btnPlay" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 9999;
+">
+    ▶ Reproducir música
+</button>
+
 <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const a = document.getElementById('musica');
+    const audio = document.getElementById("musica");
+    const btn = document.getElementById("btnPlay");
 
-        // Desmutea después de un pequeño retraso
-        setTimeout(() => {
-            a.muted = false;
-            a.volume = 0.0;
+    btn.addEventListener("click", () => {
+        audio.volume = 0.0;
+        audio.play();
 
-            // Fade-in de 2 segundos
-            const fadeDuration = 2000; // 2 segundos
-            const step = 0.02;         // cuánto sube cada vez
-            const interval = fadeDuration * step; // intervalo necesario
+        // Fade-in de 2 segundos
+        const fade = setInterval(() => {
+            if (audio.volume < 1.0) {
+                audio.volume = Math.min(audio.volume + 0.05, 1.0);
+            } else {
+                clearInterval(fade);
+            }
+        }, 100);
 
-            const fade = setInterval(() => {
-                if (a.volume < 1.0) {
-                    a.volume = Math.min(a.volume + step, 1.0);
-                } else {
-                    clearInterval(fade);
-                }
-            }, interval);
-        }, 300);
+        btn.style.display = "none"; // desaparecer botón
     });
 </script>
+
 
 
 
@@ -114,6 +127,7 @@
 
 </body>
 </html>
+
 
 
 
