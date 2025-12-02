@@ -17,11 +17,40 @@
     -->
     <!-- mp3 al inioiar la página    -->
 
-    <audio autoplay loop>
+   <!-- <audio autoplay loop>
+        <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
+    </audio>
+-->
+    <audio id="musica" autoplay loop muted>
         <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
     </audio>
 
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const a = document.getElementById('musica');
 
+        // Desmutea después de un corto delay
+        setTimeout(() => {
+            a.muted = false;
+            a.volume = 0.0;   // volumen inicial
+
+            // Fade-in suave
+            const fade = setInterval(() => {
+                if (a.volume < 1.0) {
+                    a.volume = Math.min(a.volume + 0.02, 1.0);
+                } else {
+                    clearInterval(fade);
+                }
+            }, 120); // ajuste finura del fade (más pequeño = más suave)
+        }, 300);
+    });
+</script>
+    
+
+
+
+    
+    
 
 
 
@@ -81,6 +110,7 @@
 
 </body>
 </html>
+
 
 
 
