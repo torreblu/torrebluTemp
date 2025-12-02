@@ -26,11 +26,12 @@ body {
 
 .topnav ul {
     list-style: none;
-    display: inline-flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
 }
+
 
 .topnav ul li a {
     color: #fff;
@@ -72,6 +73,10 @@ section.hero::before {
     z-index: 0;
 }
 
+section.hero {
+    position: relative;
+    overflow: hidden;
+}
 
 /**/
 
@@ -246,4 +251,5 @@ footer {
         font-size: 1.5rem;
     }
 }
+
 
