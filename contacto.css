@@ -54,6 +54,27 @@ section.hero {
     margin-top: 70px;
 }
 
+
+
+/**/
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: url('assets/images/logo.jpeg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.35; /* acá debo revisar el logo*/
+    filter: blur(1px); /* filter y opacity*/
+    z-index: 0;
+}
+
+
+/**/
+
 section.hero h1 {
     font-size: 2.8rem;
     margin-bottom: 20px;
@@ -225,3 +246,4 @@ footer {
         font-size: 1.5rem;
     }
 }
+
