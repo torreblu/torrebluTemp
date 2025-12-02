@@ -10,34 +10,33 @@
 <body>
 
     <!-- mp3 al inioiar la página    -->
-  <audio id="musica" autoplay loop muted>
-    <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const a = document.getElementById('musica');
+    <audio id="musica" autoplay loop muted>
+        <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
+    </audio>
 
-        // Pequeño delay para que el navegador no bloquee tan agresivamente
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('musica');
+
+        // Espera 1 segundo
         setTimeout(() => {
-            a.muted = false;
-            a.volume = 0.0;
+            audio.muted = false;
+            audio.volume = 0.0;
 
-            // Fade-in de 2 segundos
-            const fadeDuration = 2000; // 2 s
-            const step = 0.02;         
-            const interval = fadeDuration * step; 
-
+            // Fade-in suave (2 segundos)
             const fade = setInterval(() => {
-                if (a.volume < 1.0) {
-                    a.volume = Math.min(a.volume + step, 1.0);
+                if (audio.volume < 1.0) {
+                    audio.volume = Math.min(audio.volume + 0.05, 1.0);
                 } else {
                     clearInterval(fade);
-                }
-            }, interval);
-        }, 300);  // evita bloqueo inmediato
-    });
-</script>
+                    }
+                }, 100);
+
+            }, 1000); // 1 segundo
+        });
+    </script>
+
 
    
   
@@ -150,6 +149,7 @@
 
 </body>
 </html>
+
 
 
 
