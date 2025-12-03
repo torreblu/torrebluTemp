@@ -1,5 +1,5 @@
 /* ===================================================
-   SCRIPT GENERAL DEL SITIO
+   MAIN.JS - SCRIPT GENERAL DEL SITIO
 =================================================== */
 
 /* ===================================================
@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ===================================================
        Navbar: Marcar automáticamente la página activa
+       Resalta la sección actual según el archivo
     ==================================================== */
     const currentPage = location.pathname.split("/").pop();
     const links = document.querySelectorAll(".topnav a");
@@ -24,20 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===================================================
-       Menú hamburguesa: Mostrar/ocultar enlaces en móviles
+       Menú hamburguesa (solo móviles)
+       Muestra/oculta los links cuando se hace click
     ==================================================== */
-    const hamburger = document.querySelector(".hamburger");
+    const hamburger = document.getElementById("nav-toggle"); // id del toggle
     const navMenu = document.querySelector(".topnav ul");
 
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("show");
+            navMenu.classList.toggle("active"); // coincide con CSS @media móviles
         });
     }
 });
 
 /* ===================================================
-   Función para cargar PDFs dinámicamente (página Recursos)
+   Función para cargar PDFs dinámicamente
+   (página Recursos)
 =================================================== */
 function loadPDF(pdfPath) {
     const viewer = document.querySelector(".pdf-viewer");
@@ -47,7 +50,8 @@ function loadPDF(pdfPath) {
 }
 
 /* ===================================================
-   Función para abrir WhatsApp (página Contacto)
+   Función para abrir WhatsApp en nueva pestaña
+   (página Contacto)
 =================================================== */
 function openWhatsApp(number, message) {
     const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
@@ -56,5 +60,5 @@ function openWhatsApp(number, message) {
 
 /* ===================================================
    Espacio para futuras funciones generales
-   Ej: sliders, animaciones, interacciones
+   Ejemplos: sliders, animaciones, interacciones
 =================================================== */
