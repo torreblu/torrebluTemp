@@ -471,3 +471,105 @@ footer {
     font-size: 0.9rem;
 }
 
+
+/* ========================================= */
+/* --- ESTILOS ESPECÍFICOS PARA CONTACTO.HTML --- */
+/* ========================================= */
+
+/* --- 1. Tarjetas de Contacto Compactas --- */
+.contact-methods-grid {
+    display: grid;
+    /* 3 columnas iguales en escritorio, mínimo 280px por tarjeta */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border-top: 4px solid #0072e5; /* Borde superior distintivo */
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* Asegura que el botón se alinee si los párrafos tienen diferente altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item i {
+    color: #0072e5; /* Color del ícono principal */
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact-item h3 {
+    font-size: 1.3rem;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.contact-item .btn-secundario {
+    /* Esto es crucial para la uniformidad */
+    width: 100%; 
+    margin-top: 5px;
+}
+
+/* --- 2. Estilos para Mapa y Redes Sociales --- */
+
+/* Contenedor principal del mapa para limitar su ancho */
+.map-section .wrap {
+    max-width: 900px; /* Limita el ancho del contenedor en el centro */
+}
+
+.map-container {
+    /* Establece la relación de aspecto del mapa */
+    position: relative;
+    padding-bottom: 56.25%; /* Relación 16:9 (altura es 56.25% del ancho) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Ajustes para las tarjetas de Redes Sociales (Hacerlas más pequeñas) */
+.social-cards .cards {
+    /* Forzamos 3 columnas, haciéndolas más compactas que las tarjetas generales */
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 800px; /* Limita el ancho del grid de redes sociales */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajuste para el botón de redes sociales */
+.social-cards .card .btn-service {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
