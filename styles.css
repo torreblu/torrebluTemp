@@ -422,4 +422,23 @@ footer {
 
 
 
+/* GRUPO DE BOTONES EN TARJETA: Contenedor Flex para alinear */
+.card-buttons {
+    margin-top: auto; 
+    padding-top: 15px;
+    display: flex; 
+    justify-content: space-between; /* Distribuye el espacio (o usa space-around) */
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Pequeño espacio entre los botones */
+}
 
+/* AJUSTE CLAVE para que ambos botones sean pequeños y azules */
+.card-buttons a.btn-service, 
+.card-buttons button.btn-service { /* Aplica tanto a <a> como a <button> */
+    margin-top: 0; 
+    padding: 8px 10px; /* Tamaño del botón reducido */
+    font-size: 0.9rem; 
+    flex-basis: 50%; /* CLAVE: Ocupa la mitad del ancho */
+    text-align: center;
+}
