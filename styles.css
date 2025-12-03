@@ -1,0 +1,425 @@
+/* --- RESET BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #001f3f;
+}
+
+
+
+/**/
+/* --- HEADER / NAVBAR CENTRADA --- */
+.topnav {
+    width: 100%;
+    background-color: #003366;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.topnav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* 👉 permite que los enlaces bajen de línea */
+    justify-content: center; /* 👉 centrado */
+    gap: 12px 20px; /* 👉 espacio vertical y horizontal */
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 6px 12px;
+    white-space: nowrap; /* 👉 evita que se rompan palabras */
+}
+
+.topnav ul li a:hover,
+.topnav ul li a.active {
+    color: #00aaff;
+}
+
+/* --- Ajustes móviles --- */
+@media (max-width: 480px) {
+    .topnav {
+        padding: 12px;
+    }
+
+    .topnav ul {
+        gap: 10px 12px;
+    }
+
+    .topnav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+}
+
+
+/**/
+
+
+/* --- HEADER / NAVBAR CENTRADA --- */
+/*
+.topnav {
+    width: 100%;
+    background-color: #003366;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.topnav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.topnav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 10px;
+}
+
+.topnav ul li a:hover,
+.topnav ul li a.active {
+    color: #00aaff;
+}
+
+*/
+
+
+
+/* --- HERO --- */
+section.hero {
+    position: relative;
+    padding: 100px 20px 80px 20px;
+    overflow: hidden;
+    background-color: #e0e8f5;
+    text-align: center;
+    margin-top: 70px;
+}
+
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: url('assets/images/logo.jpeg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.35; /* acá debo revisar el logo*/
+    filter: blur(1px); /* filter y opacity*/
+    z-index: 0;
+}
+
+section.hero div.wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.hero h1 {
+    font-size: 2.8rem;
+    color: #001f3f;
+    margin-bottom: 20px;
+}
+
+section.hero p {
+    font-size: 1.2rem;
+    color: #004080;
+}
+
+/* --- BOTONES --- */
+a.button, a.btn-service {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #0059b3, #0072e5);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+a.button:hover, a.btn-service:hover {
+    background: linear-gradient(90deg, #003366, #0059b3);
+    transform: translateY(-2px);
+}
+
+/* --- SECCIONES --- */
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #001f3f;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem;
+    color: #003366;
+    text-align: center;
+}
+
+/* --- CUADRÍCULAS --- */
+div.cards, div.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+div.card, div.service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+div.card:hover, div.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+div.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+div.card h3, div.service-card h3 {
+    font-size: 1.2rem;
+    color: #001f3f;
+    margin-bottom: 10px;
+}
+
+div.card p, div.service-card p {
+    font-size: 0.95rem;
+    color: #003366;
+}
+
+/* --- VALORES --- */
+div.cards-section .card {
+    border-left: 4px solid #0072e5;
+    padding-left: 15px;
+    text-align: left;
+}
+
+
+/* GALERÍA */
+.cards-section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cards-section .card img {
+    width: 100%;
+    height: 200px; /* ajusta según prefieras */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    section.hero h1 {
+        font-size: 2.4rem;
+    }
+    section.hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .topnav ul {
+        gap: 15px;
+    }
+    section.hero {
+        padding: 80px 15px 60px 15px;
+    }
+    section.hero h1 {
+        font-size: 2rem;
+    }
+    section.hero p {
+        font-size: 1rem;
+    }
+    div.cards, div.card-grid {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    section.hero h1 {
+        font-size: 1.6rem;
+    }
+    section.hero p {
+        font-size: 0.95rem;
+    }
+    a.button, a.btn-service {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    div.cards, div.card-grid {
+        gap: 10px;
+    }
+}
+/*mision vision eslogan*/
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.mission-vision-grid .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+
+
+/* --- estilo para proyectos de CLIENTES --- */
+.clients-section .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.clients-section .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 120px; /* altura uniforme */
+}
+
+.clients-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.clients-section .card img {
+    max-width: 100%;
+    max-height: 80px; /* para que todos tengan tamaño similar */
+    object-fit: contain;
+}
+
+
+
+
+/* --- CLIENTES --- */
+.clients-section .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* máximo 4 por fila */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.clients-section .card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.clients-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.clients-section .card img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.clients-section .card h3 {
+    font-size: 1.1rem;
+    color: #001f3f;
+    margin-bottom: 5px;
+}
+
+.clients-section .card p {
+    font-size: 0.9rem;
+    color: #003366;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .clients-section .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-section .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-section .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
