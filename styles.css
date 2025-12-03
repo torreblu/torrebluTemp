@@ -160,8 +160,7 @@ a.button:hover, a.btn-service:hover {
 }
 
 /* ===================================================
-   5. TARJETAS (GRID SYSTEM)
-   Esto arregla que se vean "horribles" y apiladas
+   5. TARJETAS (GRID SYSTEM) - MEJORADO
 =================================================== */
 .cards, .card-grid {
     display: grid;
@@ -169,23 +168,31 @@ a.button:hover, a.btn-service:hover {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     width: 100%;
+    align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
 }
 
 .card {
     background-color: #fff;
-    padding: 25px;
+    padding: 30px 25px; /* Un poco más de espacio vertical */
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* Sombra más suave y moderna */
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    position: relative;
+    overflow: hidden; /* Para contener efectos */
+    
+    /* ACENTO DE DISEÑO: Borde superior grueso */
+    border-top: 5px solid #003366; 
 }
 
+/* Efecto Hover: La tarjeta sube y el borde cambia de color */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-top-color: #00aaff; /* Cambia a celeste brillante */
 }
 
 .card img {
@@ -193,19 +200,39 @@ a.button:hover, a.btn-service:hover {
     height: 200px;
     object-fit: cover;
     border-radius: 6px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #001f3f;
     margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Elemento decorativo: Línea pequeña debajo del título */
+.card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px; /* Largo de la línea */
+    height: 3px; /* Grosor */
+    background-color: #e0e0e0; /* Gris suave */
+    transition: background-color 0.3s;
+}
+
+/* Al pasar el mouse, la línea decorativa también se ilumina */
+.card:hover h3::after {
+    background-color: #00aaff;
 }
 
 .card p {
-    font-size: 0.95rem;
-    color: #003366;
-    line-height: 1.5;
+    font-size: 1rem;
+    color: #555; /* Gris oscuro en lugar de azul para mejor lectura */
+    line-height: 1.6;
 }
 
 /* ===================================================
@@ -344,3 +371,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
