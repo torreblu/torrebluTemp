@@ -19,7 +19,6 @@
 
             // Espera 1 segundo
             setTimeout(() => {
-                // Intenta reproducir y desmutear (puede fallar si el navegador lo bloquea)
                 audio.muted = false;
                 audio.volume = 0.0;
 
@@ -57,26 +56,26 @@
             <h1>La energía de tu empresa, en un solo lugar</h1>
             <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
             <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
-            </div>
+        </div>
     </section>
 
     <section class="services-section">
         <div class="wrap"> 
             <h2 class="section-title">Nuestros Pilares de Servicio</h2>
-            <div class="card-grid">
-                <div class="service-card">
+            <div class="cards"> 
+                <div class="card">
                     <i class="fa-solid fa-bolt"></i>
                     <h3>Insumos Eléctricos</h3>
                     <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
                     <a href="galeria.html" class="btn-service">Explorar</a>
                 </div>
-                <div class="service-card">
+                <div class="card">
                     <i class="fa-solid fa-wrench"></i>
                     <h3>Instalaciones y Proformas</h3>
                     <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
                     <a href="servicios.html" class="btn-service">Solicitar</a>
                 </div>
-                <div class="service-card">
+                <div class="card">
                     <i class="fa-solid fa-robot"></i>
                     <h3>Proyectos y Automatización</h3>
                     <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
@@ -92,8 +91,8 @@
 
     <script src="main.js"></script>
     <script>
-        // Mantiene el script para actualizar el año en el footer
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    </body>
+
+</body>
 </html>
