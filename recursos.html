@@ -5,19 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos / Catálogos</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-        function verPDF(ruta) {
-            document.getElementById("visorPDF").src = ruta;
-        }
-    </script>
 </head>
 <body class="recursos-page">
 
-    <!-- NAVBAR -->
-<header class="topnav">
+    <header class="topnav">
     <div class="nav-container">
-        <a href="#" class="nav-toggle" id="nav-toggle">&#9776;</a> <!-- hamburguesa móviles -->
-        <ul id="nav-links">
+        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> <ul id="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="servicios.html">Servicios</a></li>
             <li><a href="galeria.html">Galería</a></li>
@@ -32,7 +25,6 @@
 </header>
 
 
-    <!-- HERO -->
     <section class="hero">
         <div class="wrap">
             <h1>Catálogos y Recursos</h1>
@@ -40,7 +32,6 @@
         </div>
     </section>
 
-    <!-- LISTADO DE CATÁLOGOS -->
     <section>
         <h2>Documentos Disponibles</h2>
         <div class="cards-section">
@@ -49,42 +40,42 @@
                 <div class="card">
                     <h3>Catálogo 1</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo1.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo1.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo1.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
                 <div class="card">
                     <h3>Catálogo 2</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo2.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo2.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
                 <div class="card">
                     <h3>Catálogo 3</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo3.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo3.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo3.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
                 <div class="card">
                     <h3>Catálogo 4</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo4.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo4.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo4.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
                 <div class="card">
                     <h3>Catálogo 5</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo5.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo5.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo5.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
                 <div class="card">
                     <h3>Catálogo 6</h3>
                     <p>Descripción breve del contenido.</p>
-                    <button onclick="verPDF('assets/docs/catalogo6.pdf')">Ver</button><br>
+                    <button onclick="loadPDF('assets/docs/catalogo6.pdf')">Ver</button><br>
                     <a href="assets/docs/catalogo6.pdf" class="btn-service" download>Descargar</a>
                 </div>
 
@@ -92,16 +83,15 @@
         </div>
     </section>
 
-    <!-- VISOR PDF -->
     <section>
         <h2>Vista Previa</h2>
         <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/catalogo1.pdf"></iframe>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        &copy; 2025 TorreBlu. Todos los derechos reservados.
+        © <span id="year"></span> TORREBLU – Todos los derechos reservados
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>
