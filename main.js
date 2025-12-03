@@ -1,5 +1,5 @@
 /* ===================================================
-   SCRIPT GENERAL
+   MAIN.JS - Script general para todas las páginas
 =================================================== */
 
 /* ===============================
@@ -14,7 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ===============================
+   Detectar página actual y marcar navbar
+   Muestra la página actual en consola y marca el enlace activo
+=============================== */
+document.addEventListener("DOMContentLoaded", () => {
+    const path = window.location.pathname; // ruta completa
+    const page = path.substring(path.lastIndexOf("/") + 1); // nombre del archivo HTML
+    console.log("Página actual:", page); // consola para referencia
+
+    // Marcar enlace activo en la navbar
+    const navLinks = document.querySelectorAll(".topnav ul li a");
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === page) {
+            link.classList.add("active");
+        }
+    });
+});
+
+/* ===============================
    Página Recursos: Cargar PDF dinámicamente
+   Uso: loadPDF('ruta/a/archivo.pdf');
 =============================== */
 function loadPDF(pdfPath) {
     const viewer = document.querySelector(".pdf-viewer");
@@ -25,6 +44,7 @@ function loadPDF(pdfPath) {
 
 /* ===============================
    Página Contacto: Abrir WhatsApp
+   Uso: openWhatsApp('593988847802', 'Hola quiero más información');
 =============================== */
 function openWhatsApp(number, message) {
     const url = `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
@@ -35,3 +55,10 @@ function openWhatsApp(number, message) {
    Funciones generales futuras
    Aquí puedes agregar animaciones, sliders, u otras interacciones
 =============================== */
+// Ejemplo: animación de cards al hacer scroll (opcional)
+// function animateCards() {
+//     const cards = document.querySelectorAll('.card');
+//     cards.forEach(card => {
+//         // agregar lógica de animación
+//     });
+// }
