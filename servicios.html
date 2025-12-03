@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORREBLU | Servicios</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body class="servicios-page">
+<body>
 
 <header class="topnav">
-    <div class="nav-container">
-        <a href="#" class="nav-toggle" id="nav-toggle">☰</a> <ul id="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="recursos.html">Recursos</a></li>
-            <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
-            <li><a href="clientes.html">Nuestros clientes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="capacitacion.html">Capacitación</a></li>
-        </ul>
-    </div>
+     <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="clientes.html">Nuestros clientes</a></li>
+        <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="capacitacion.html">Capacitación</a></li>
+    </ul>
 </header>
-
 
 <section class="hero">
     <div class="wrap">
-        <h1>Servicios TORREBLU</h1>
-        <p>Explora nuestras soluciones eléctricas, de automatización y capacitación técnica.</p>
+        <h1>Servicios Profesionales</h1>
+        <p>Soluciones eléctricas para hogares, negocios e industria.</p>
     </div>
 </section>
 
@@ -37,33 +34,29 @@
         <h2 class="section-title">Nuestros Servicios</h2>
         <div class="cards">
             <div class="card">
-                <h3>Automatización Industrial</h3>
-                <p>Diseño e implementación de sistemas automatizados para procesos industriales.</p>
-            </div>
-            <div class="card">
+                <i class="fa-solid fa-plug-circle-bolt fa-2x"></i>
                 <h3>Instalaciones Eléctricas</h3>
-                <p>Proyectos eléctricos confiables, seguros y con normativas actualizadas.</p>
+                <p>Montaje de redes eléctricas residenciales, comerciales e industriales.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma%20de%20instalación%20eléctrica." class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
             <div class="card">
-                <h3>Mantenimiento Preventivo</h3>
-                <p>Planes de mantenimiento que reducen fallas y prolongan la vida útil del equipo.</p>
+                <i class="fa-solid fa-clipboard-check fa-2x"></i>
+                <h3>Proformas y Evaluaciones</h3>
+                <p>Inspección técnica y proformas detalladas en menos de 24 horas.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
             <div class="card">
-                <h3>Capacitación Técnica</h3>
-                <p>Programas de formación para personal en automatización y electricidad.</p>
+                <i class="fa-solid fa-microchip fa-2x"></i>
+                <h3>Automatización y Control</h3>
+                <p>Diseño de proyectos con PLCs, sensores, tableros y sistemas de control.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
             <div class="card">
-                <h3>Consultoría</h3>
-                <p>Asesoría especializada para optimizar procesos y reducir costos.</p>
+                <i class="fa-solid fa-lightbulb fa-2x"></i>
+                <h3>Iluminación</h3>
+                <p>Optimización de iluminación para ahorro energético y seguridad.</p>
+                <a href="https://wa.me/593988847802?text=Hola,%20quiero%20una%20proforma." class="btn-service" target="_blank">Solicitar este servicio</a>
             </div>
-            <div class="card">
-                <h3>Proyectos a Medida</h3>
-                <p>Soluciones personalizadas según las necesidades de cada cliente.</p>
-            </div>
-        </div>
-
-        <div style="text-align:center; margin-top:30px;">
-            <a href="contacto.html" class="btn-service">Solicitar Asesoría</a>
         </div>
     </div>
 </section>
@@ -72,6 +65,11 @@
     © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
 
-<script src="main.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
+
+
+
