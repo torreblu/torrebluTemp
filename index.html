@@ -13,27 +13,6 @@
         <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
     </audio>
 
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const audio = document.getElementById('musica');
-
-            // Espera 1 segundo
-            setTimeout(() => {
-                audio.muted = false;
-                audio.volume = 0.0;
-
-                // Fade-in suave (2 segundos)
-                const fade = setInterval(() => {
-                    if (audio.volume < 1.0) {
-                        audio.volume = Math.min(audio.volume + 0.05, 1.0);
-                    } else {
-                        clearInterval(fade);
-                    }
-                }, 100);
-
-            }, 1000); // 1 segundo
-        });
-    </script>
     <header class="topnav">
         <div class="nav-container">
             <a href="#" class="nav-toggle" id="nav-toggle">☰</a> 
@@ -90,9 +69,6 @@
     </footer>
 
     <script src="main.js"></script>
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
 
 </body>
 </html>
