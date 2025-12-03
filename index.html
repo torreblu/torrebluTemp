@@ -1,164 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TORREBLU | Inicio</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-    <!-- mp3 al inioiar la página    -->
-
-    <audio id="musica" autoplay loop muted>
-        <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('musica');
-
-        // Espera 1 segundo
-        setTimeout(() => {
-            audio.muted = false;
-            audio.volume = 0.0;
-
-            // Fade-in suave (2 segundos)
-            const fade = setInterval(() => {
-                if (audio.volume < 1.0) {
-                    audio.volume = Math.min(audio.volume + 0.05, 1.0);
-                } else {
-                    clearInterval(fade);
-                    }
-                }, 100);
-
-            }, 1000); // 1 segundo
-        });
-    </script>
-
-
-   
-  
-  
-    
-<!--
-    <audio id="musica" loop>
-    <source src="assets/audio/TorreBlu.mp3" type="audio/mpeg">
-</audio>
-
-<button id="btnPlay" style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 18px;
-    background: #003366;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    z-index: 9999;
-">
-    ▶ Reproducir música
-</button>
-
-<script>
-    const audio = document.getElementById("musica");
-    const btn = document.getElementById("btnPlay");
-
-    btn.addEventListener("click", () => {
-        audio.volume = 0.0;
-        audio.play();
-
-        // Fade-in de 2 segundos
-        const fade = setInterval(() => {
-            if (audio.volume < 1.0) {
-                audio.volume = Math.min(audio.volume + 0.05, 1.0);
-            } else {
-                clearInterval(fade);
-            }
-        }, 100);
-
-        btn.style.display = "none"; // desaparecer botón
-    });
-</script>
-
--->
-
-    <!--Mapa del sitio-->
 <header class="topnav">
-     <ul>
+    <ul>
+        <li><a href="index.html" class="active">Inicio</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="galeria.html">Galería</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="recursos.html">Recursos</a></li>
-        <li><a href="clientes.html">Nuestros clientes</a></li>
         <li><a href="nuestrosvalores.html">Nuestros valores</a></li>
+        <li><a href="clientes.html">Nuestros clientes</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="capacitacion.html">Capacitación</a></li>
     </ul>
 </header>
 
 <section class="hero">
     <div class="wrap">
-        <h1>La energía de tu empresa, en un solo lugar</h1>
-        <p>Desde insumos eléctricos hasta proyectos de automatización industrial completos.</p>
-        <p>TORREBLU es tu aliado estratégico en energía y eficiencia.</p>
-       <!-- <a href="servicios.html" class="button">Explorar Servicios</a> quito el botón porque no me deja apreciar el logo como marca de awa-->
+        <h1>Bienvenido a TORREBLU</h1>
+        <p>Soluciones eléctricas y de automatización para industria y agroindustria.</p>
     </div>
 </section>
 
-<div class="wrap">
-    <section class="services-section">
-        <h2 class="section-title">Nuestros Pilares de Servicio</h2>
-        <div class="card-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>Insumos Eléctricos</h3>
-                <p>Catálogo completo de cables, contactores, iluminación y más. Ofertas diarias.</p>
-                <a href="galeria.html" class="btn-service">Explorar</a>
+<section class="cards-section">
+    <div class="wrap">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Automatización Industrial</h3>
+                <p>Optimización de procesos con tecnología de punta.</p>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-wrench"></i>
-                <h3>Instalaciones y Proformas</h3>
-                <p>Servicios residenciales, comerciales e industriales con proforma en 24h.</p>
-                <a href="servicios.html" class="btn-service">Solicitar</a>
+            <div class="card">
+                <h3>Soluciones Eléctricas</h3>
+                <p>Instalaciones seguras y confiables.</p>
             </div>
-            <div class="service-card">
-                <i class="fa-solid fa-robot"></i>
-                <h3>Proyectos y Automatización</h3>
-                <p>Diseño y ejecución de sistemas de control para fábricas y maquinaria.</p>
-                <a href="servicios.html" class="btn-service">Conocer Más</a>
+            <div class="card">
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Minimiza fallas y maximiza productividad.</p>
+            </div>
+            <div class="card">
+                <h3>Capacitación Técnica</h3>
+                <p>Formación especializada para tu equipo.</p>
             </div>
         </div>
-    </section>
-</div>
+
+        <div style="text-align:center; margin-top:30px;">
+            <a href="contacto.html" class="btn-service">Solicitar Asesoría</a>
+        </div>
+    </div>
+</section>
 
 <footer>
     © <span id="year"></span> TORREBLU – Todos los derechos reservados
 </footer>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
