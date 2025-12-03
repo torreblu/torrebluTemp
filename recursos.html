@@ -24,7 +24,6 @@
     </div>
 </header>
 
-
     <section class="hero">
         <div class="wrap">
             <h1>Catálogos y Recursos</h1>
@@ -33,61 +32,77 @@
     </section>
 
     <section>
-        <h2>Documentos Disponibles</h2>
-        <div class="cards-section">
-            <div class="cards">
-                
-                <div class="card">
-                    <h3>NEO ELITECH</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/ECS-961-NEO ELITECH.pdf')">Ver</button><br>
-                    <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
-                </div>
+        <div class="wrap">
+            <h2 class="section-title">Documentos Disponibles</h2>
+            <div class="cards-section">
+                <div class="cards">
+                    
+                    <div class="card">
+                        <h3>NEO ELITECH</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/ECS-961-NEO ELITECH.pdf')">Ver</button><br>
+                        <a href="assets/docs/ECS-961-NEO ELITECH.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
-                <div class="card">
-                    <h3>Catálogo 2</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/catalogo2.pdf')">Ver</button><br>
-                    <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
-                </div>
+                    <div class="card">
+                        <h3>Catálogo 2</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/catalogo2.pdf')">Ver</button><br>
+                        <a href="assets/docs/catalogo2.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
-                <div class="card">
-                    <h3>Catálogo 3</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/catalogo3.pdf')">Ver</button><br>
-                    <a href="assets/docs/catalogo3.pdf" class="btn-service" download>Descargar</a>
-                </div>
+                    <div class="card">
+                        <h3>Catálogo 3</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/catalogo3.pdf')">Ver</button><br>
+                        <a href="assets/docs/catalogo3.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
-                <div class="card">
-                    <h3>Catálogo 4</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/catalogo4.pdf')">Ver</button><br>
-                    <a href="assets/docs/catalogo4.pdf" class="btn-service" download>Descargar</a>
-                </div>
+                    <div class="card">
+                        <h3>Catálogo 4</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/catalogo4.pdf')">Ver</button><br>
+                        <a href="assets/docs/catalogo4.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
-                <div class="card">
-                    <h3>Catálogo 5</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/catalogo5.pdf')">Ver</button><br>
-                    <a href="assets/docs/catalogo5.pdf" class="btn-service" download>Descargar</a>
-                </div>
+                    <div class="card">
+                        <h3>Catálogo 5</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/catalogo5.pdf')">Ver</button><br>
+                        <a href="assets/docs/catalogo5.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
-                <div class="card">
-                    <h3>Catálogo 6</h3>
-                    <p>Descripción breve del contenido.</p>
-                    <button onclick="loadPDF('assets/docs/catalogo6.pdf')">Ver</button><br>
-                    <a href="assets/docs/catalogo6.pdf" class="btn-service" download>Descargar</a>
-                </div>
+                    <div class="card">
+                        <h3>Catálogo 6</h3>
+                        <p>Descripción breve del contenido.</p>
+                        <button onclick="loadPDF('assets/docs/catalogo6.pdf')">Ver</button><br>
+                        <a href="assets/docs/catalogo6.pdf" class="btn-service" download>Descargar</a>
+                    </div>
 
+                </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <h2>Vista Previa</h2>
-        <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/catalogo1.pdf"></iframe>
+    <section class="pdf-section">
+        <div class="wrap">
+            <h2 class="section-title">Vista Previa del Documento</h2>
+            
+            <div class="pdf-window">
+                <div class="pdf-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="pdf-title">Visor de Documentos</span>
+                </div>
+                <iframe id="visorPDF" class="pdf-viewer" src="assets/docs/ECS-961-NEO ELITECH.pdf"></iframe>
+            </div>
+            
+            <p style="text-align:center; margin-top:15px; font-size:0.9rem; color:#666;">
+                El visor de PDF se actualiza al hacer clic en "Ver". ¿Necesitas guardarlo? Descárgalo directamente desde el botón.
+            </p>
+        </div>
     </section>
-
     <footer>
         © <span id="year"></span> TORREBLU – Todos los derechos reservados
     </footer>
