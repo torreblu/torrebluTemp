@@ -1,55 +1,34 @@
 /* ===================================================
-   ESTILOS GENERALES DEL SITIO
-=================================================== */
-
-/* --- RESET BÁSICO --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f4f6f8;
-    color: #001f3f;
-}
-
-/* ===================================================
    HEADER / NAVBAR
 =================================================== */
+
+/* Header normal (pantallas grandes) */
 .topnav {
     width: 100%;
     background-color: #003366;
-    padding: 15px 20px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
-    text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.topnav .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* centra el menú */
     align-items: center;
+    padding: 15px 20px;
+    position: relative;
 }
 
-/* Logo o título opcional */
-.topnav .logo {
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-/* Lista de enlaces */
 .topnav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-/* Enlaces */
 .topnav ul li a {
     color: #fff;
     text-decoration: none;
@@ -63,226 +42,44 @@ body {
     color: #00aaff;
 }
 
-/* Botón hamburguesa (móvil) */
-.hamburger {
+/* Menú hamburguesa (desktop oculto) */
+.topnav .nav-toggle {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-}
-
-/* ===================================================
-   HERO / SECCIÓN PRINCIPAL
-=================================================== */
-section.hero {
-    position: relative;
-    padding: 100px 20px 80px 20px;
-    text-align: center;
-    background-color: #e0e8f5;
-    margin-top: 70px;
-}
-
-section.hero::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    transform: translate(-50%, -50%);
-    background: url('assets/images/logo.jpeg') no-repeat center center;
-    background-size: contain;
-    opacity: 0.35;
-    filter: blur(1px);
-    z-index: 0;
-}
-
-section.hero .wrap {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-section.hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-section.hero p {
-    font-size: 1.2rem;
-    color: #004080;
-}
-
-/* ===================================================
-   BOTONES
-=================================================== */
-a.button, a.btn-service, .card button {
-    display: inline-block;
-    padding: 12px 30px;
-    margin-top: 20px;
-    background: linear-gradient(90deg, #0059b3, #0072e5);
+    font-size: 1.8rem;
     color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
 }
 
-a.button:hover, a.btn-service:hover, .card button:hover {
-    background: linear-gradient(90deg, #003366, #0059b3);
-    transform: translateY(-2px);
-}
-
-/* ===================================================
-   SECCIONES Y TITULOS
-=================================================== */
-section {
-    padding: 60px 20px;
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #001f3f;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-section p {
-    font-size: 1rem;
-    color: #003366;
-    text-align: center;
-}
-
-/* ===================================================
-   CARDS / CATÁLOGOS / GALERÍA
-=================================================== */
-.cards-section {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.cards-section .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.cards-section .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.cards-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.cards-section .card h3 {
-    font-size: 1.2rem;
-    color: #001f3f;
-    margin-bottom: 10px;
-}
-
-.cards-section .card p {
-    font-size: 0.95rem;
-    color: #003366;
-}
-
-.cards-section .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-/* ===================================================
-   FOOTER
-=================================================== */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #003366;
-    color: #fff;
-    margin-top: 40px;
-}
-
-/* ===================================================
-   RESPONSIVE
-=================================================== */
-@media (max-width: 1024px) {
-    section.hero h1 {
-        font-size: 2.4rem;
-    }
-    section.hero p {
-        font-size: 1.1rem;
-    }
-    .cards-section .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
+/* ========================
+   MÓVILES (max-width: 768px)
+======================== */
 @media (max-width: 768px) {
+    /* Contenedor header: espacio entre toggle y logo */
+    .topnav .nav-container {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    /* Ocultamos links inicialmente */
     .topnav ul {
-        display: none; /* oculto hasta pulsar hamburguesa */
+        display: none;
         flex-direction: column;
+        gap: 10px;
         width: 100%;
         background-color: #003366;
         position: absolute;
-        top: 60px;
+        top: 60px; /* debajo del header */
         left: 0;
+        padding: 10px 0;
     }
 
-    .topnav ul.show {
+    /* Mostrar menú al hacer click en hamburguesa */
+    .topnav ul.active {
         display: flex;
     }
 
-    .hamburger {
-        display: flex;
-    }
-
-    section.hero {
-        padding: 80px 15px 60px 15px;
-    }
-
-    section.hero h1 {
-        font-size: 2rem;
-    }
-    section.hero p {
-        font-size: 1rem;
-    }
-    .cards-section .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    section.hero h1 {
-        font-size: 1.6rem;
-    }
-    section.hero p {
-        font-size: 0.95rem;
-    }
-    a.button, a.btn-service, .card button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-    .cards-section .cards {
-        grid-template-columns: 1fr;
+    /* Mostrar hamburguesa en móvil */
+    .topnav .nav-toggle {
+        display: block;
     }
 }
