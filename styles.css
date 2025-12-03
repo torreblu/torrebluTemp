@@ -1,8 +1,24 @@
 /* ===================================================
-   HEADER / NAVBAR
+   1. RESET Y ESTILOS BASE
 =================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
 
-/* Header normal (pantallas grandes) */
+body {
+    background-color: #f4f6f8;
+    color: #001f3f;
+    /* Aseguramos que el contenido no choque con el header fijo */
+    padding-top: 70px; 
+}
+
+/* ===================================================
+   2. HEADER / NAVBAR
+   (Logica del primer archivo para que funcione el toggle)
+=================================================== */
 .topnav {
     width: 100%;
     background-color: #003366;
@@ -17,7 +33,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* centra el menú */
+    justify-content: center; /* Centra el menú en pantallas grandes */
     align-items: center;
     padding: 15px 20px;
     position: relative;
@@ -27,6 +43,8 @@
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .topnav ul li a {
@@ -35,6 +53,7 @@
     font-weight: 500;
     padding: 5px 10px;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 
 .topnav ul li a:hover,
@@ -42,44 +61,286 @@
     color: #00aaff;
 }
 
-/* Menú hamburguesa (desktop oculto) */
+/* Botón hamburguesa (oculto en escritorio) */
 .topnav .nav-toggle {
     display: none;
     font-size: 1.8rem;
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
 }
 
-/* ========================
-   MÓVILES (max-width: 768px)
-======================== */
+/* ===================================================
+   3. HERO SECTION (Encabezado principal)
+=================================================== */
+section.hero {
+    position: relative;
+    padding: 100px 20px 80px 20px;
+    overflow: hidden;
+    background-color: #e0e8f5;
+    text-align: center;
+    /* El margen superior ya lo maneja el body padding-top, 
+       pero ajustamos el espaciado interno */
+}
+
+/* Fondo con logo difuminado */
+section.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    /* VERIFICA QUE ESTA RUTA DE IMAGEN SEA CORRECTA EN TU CARPETA */
+    background: url('assets/images/logo.jpeg') no-repeat center center;
+    background-size: contain;
+    opacity: 0.15; /* Opacidad baja para que no moleste al texto */
+    filter: blur(2px);
+    z-index: 0;
+}
+
+section.hero .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section.hero h1 {
+    font-size: 2.8rem;
+    color: #001f3f;
+    margin-bottom: 20px;
+}
+
+section.hero p {
+    font-size: 1.2rem;
+    color: #004080;
+}
+
+/* ===================================================
+   4. SECCIONES GENERALES Y BOTONES
+=================================================== */
+section {
+    padding: 60px 20px;
+}
+
+/* Contenedor central estándar */
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+section h2.section-title {
+    font-size: 2rem;
+    color: #001f3f;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Estilos de Botones */
+a.button, a.btn-service {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #0059b3, #0072e5);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+a.button:hover, a.btn-service:hover {
+    background: linear-gradient(90deg, #003366, #0059b3);
+    transform: translateY(-2px);
+}
+
+/* ===================================================
+   5. TARJETAS (GRID SYSTEM)
+   Esto arregla que se vean "horribles" y apiladas
+=================================================== */
+.cards, .card-grid {
+    display: grid;
+    /* Crea columnas automáticas de mínimo 280px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    color: #001f3f;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #003366;
+    line-height: 1.5;
+}
+
+/* ===================================================
+   6. ESTILOS ESPECÍFICOS (Clientes, Valores, Misión)
+=================================================== */
+
+/* Estilos para Misión/Visión (Nuestros Valores) */
+.mission-vision-grid .card {
+    border-top: 4px solid #0072e5; /* Detalle visual */
+}
+
+/* Estilos para Sección de Clientes (Logos) */
+.clients-section .cards {
+    /* Ajuste para logos: más pequeños */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    align-items: center;
+}
+
+.clients-section .card {
+    padding: 15px;
+    min-height: 200px; /* Altura mínima para uniformidad */
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-section .card img {
+    height: 100px; /* Fija la altura del logo */
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Estilos para Redes Sociales (Contacto) */
+.social-cards .card {
+    align-items: center;
+}
+
+/* Estilos para Visor PDF (Recursos) */
+.pdf-viewer {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+/* Mapa en Contacto */
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ===================================================
+   7. FOOTER
+=================================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    margin-top: auto; /* Empuja el footer al fondo si hay poco contenido */
+}
+
+/* ===================================================
+   8. MEDIA QUERIES (RESPONSIVIDAD)
+=================================================== */
+
+/* --- TABLETS (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    section.hero h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* --- MÓVILES (max-width: 768px) --- */
 @media (max-width: 768px) {
-    /* Contenedor header: espacio entre toggle y logo */
+    
+    /* Navbar Móvil */
     .topnav .nav-container {
-        justify-content: space-between;
+        justify-content: space-between; /* Logo a un lado, hamburguesa al otro */
         padding: 0 20px;
     }
 
-    /* Ocultamos links inicialmente */
     .topnav ul {
-        display: none;
+        display: none; /* Oculto por defecto */
         flex-direction: column;
-        gap: 10px;
         width: 100%;
         background-color: #003366;
         position: absolute;
-        top: 60px; /* debajo del header */
+        top: 60px; /* Justo debajo de la barra */
         left: 0;
-        padding: 10px 0;
+        padding: 20px 0;
+        gap: 0;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
     }
 
-    /* Mostrar menú al hacer click en hamburguesa */
+    .topnav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .topnav ul li a {
+        display: block;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Clase que añade JS para mostrar menú */
     .topnav ul.active {
         display: flex;
     }
 
-    /* Mostrar hamburguesa en móvil */
+    /* Mostrar botón hamburguesa */
     .topnav .nav-toggle {
         display: block;
+    }
+
+    /* Ajustes generales móvil */
+    section.hero h1 {
+        font-size: 2rem;
+    }
+    
+    .cards, .card-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+}
+
+/* --- MÓVILES PEQUEÑOS (max-width: 480px) --- */
+@media (max-width: 480px) {
+    section.hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .clients-section .cards {
+        grid-template-columns: 1fr;
     }
 }
